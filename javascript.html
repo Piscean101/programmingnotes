@@ -18,8 +18,25 @@
         <a href="other.html"><p>OTHER</p></a>
     </div>
 
-    <div class="chapter bubble">Chapter 1 </div>
-    <div class="big purple bubble"></div>
+    <div class="chapter bubble">Chapter 1 - Infinite Scrolling</div>
+    <div class="medium purple bubble">
+        <p>
+            const <span class="highlight-green">url</span> = 'path/to/be/manipulated/'; <span class="highlight-note">**</span><br>
+            const <span class="highlight-green">container</span> = document.querySelector('.container');<br><br>
+            function <span class="highlight-green">getRandomNumber() </span>{...}<br><br>
+            function <span class="highlight-green">loadImages(<span class="highlight-red">num</span><span class="highlight-note">=#</span>)</span> {<br>
+                let <span class="highlight-green">i</span> = 0;<br>
+                while(<span class="highlight-green">i</span> <= <span class="highlight-red">num</span>) {<br>
+                    const <span class="highlight-green">img</span> = document.createElement('img');<br>
+                    <span class="highlight-green">img</span>.src = `${<span class="highlight-green">url</span>}${<span class="highlight-green">getRandomNumber()</span>}`;<br>
+                    <span class="highlight-green">container</span>.appendChild(<span class="highlight-green">img</span>);<br>
+                    <span class="highlight-green">i++</span> }}<br><br>
+            window.addEventListener('scroll', () => {<br>
+                if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) { <span class="highlight-green">loadImages()</span> }<br>
+            })<br><br>
+            <span class="highlight-note">// ** The end of this path must produce an image when a number is appended to the end of it</span>
+        </p>
+    </div>
 
 
     <div class="chapter bubble">Chapter 2 - Intersection Observers</div>
@@ -60,8 +77,13 @@
     </div>
 
 
-    <div class="chapter bubble">Chapter 4</div>
-    <div class="big blue bubble"></div>
+    <div class="chapter bubble">Chapter 4 - Cookies</div>
+    <div class="small blue bubble">
+        <p>
+            document.cookie = "(key)=(value) ; <span class="highlight-green">expires=(date)</span> ; <span class="highlight-red">path=(/path/here)</span>"<br><br>
+            <span class="highlight-note">// Cookies do not have a delete function but can have the expiration updated to a past date to induce instant deletion</span><br>
+        </p>
+    </div>
     
 </body>
 </html>

@@ -30,12 +30,37 @@
     </div>
 
 
-    <div class="chapter bubble">Chapter 2</div>
-    <div class="big pink bubble"></div>
+    <div class="chapter bubble">Chapter 2 - Uncommon Rules & Properties</div>
+    <div class="big pink bubble">
+        <p>
+            <span class="highlight-blue">writing-mode:</span> <span class="highlight-yellow">vertical</span> // Text becomes oriented on y-axis<br>
+            <span class="highlight-blue">scalex(-1)</span> // Flip element on the x-axis<br>
+            <span class="highlight-blue">scroll-snap</span> | <span class="highlight-blue">scroll-snap-align:</span> <span class="highlight-yellow">center</span>// Snap document to center elements after scrolling<br>
+            <span class="highlight-blue">-webkit-background-clip:</span> <span class="highlight-yellow">text</span> // Clips background to text outline<br>
+            <span class="highlight-blue">-webkit-text-fill-color:</span> <span class="highlight-yellow">transparent</span> // Pair with a gradient background<br>
+        </p>
+    </div>
 
 
-    <div class="chapter bubble">Chapter 3</div>
-    <div class="small orange bubble"></div>
+    <div class="chapter bubble">Chapter 3 - Grid Template</div>
+    <div class="small orange bubble">
+        <p>
+            .item-a {<span class="hightlight-blue">grid-area: </span><span class="highlight-green">header</span>}<br>
+            .item-b {<span class="hightlight-blue">grid-area: </span><span class="highlight-green">main</span>}<br>
+            .item-c {<span class="hightlight-blue">grid-area: </span><span class="highlight-green">sidebar</span>}<br>
+            .item-d {<span class="hightlight-blue">grid-area: </span><span class="highlight-green">footer</span>}<br><br>
+            .container {<br>
+                <span class="hightlight-blue">display: </span><span class="highlight-green">grid</span><br>
+                <span class="hightlight-blue">grid-template-columns: </span><span class="highlight-green">50px 50px 50px 50px</span><br>
+                <span class="hightlight-blue">grid-template-rows: </span><span class="highlight-green">auto</span><br>
+                <span class="hightlight-blue">grid-template-areas: </span><br>
+                <span class="highlight-green">"header header header sidebar"</span><br>
+                <span class="highlight-green">"main main . sidebar"</span><br>
+                <span class="highlight-green">". footer footer sidebar"</span><br>
+            }<br><br>
+            <span class="highlight-note">// . => empty space</span><br>
+        </p>
+    </div>
 
 
     <div class="chapter bubble">Chapter 4</div>

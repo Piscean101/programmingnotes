@@ -1,5 +1,5 @@
 body { margin: 0 }
-p { font-weight: bold ; padding: 10px ; font-family: 'Georgia'}
+p { font-weight: bold ; padding: 10px ; font-family: 'Georgia'; margin: 5px ; font-size: 15px }
 
 .navigation {
     display: flex;
@@ -23,7 +23,9 @@ a:hover { cursor: pointer ; color: gold ; text-decoration-line: underline ; text
 
 .bubble { width: 100vw ; display: flex ; align-items: center }
 
-.big { height: 750px }
+.big { height: 800px }
+
+.medium { height: 500px }
 
 .small { height: 300px }
 
@@ -60,3 +62,5 @@ a:hover { cursor: pointer ; color: gold ; text-decoration-line: underline ; text
 .highlight-note { color: rgb(100, 100, 100) }
 
 .highlight-green { color: green }
+
+.highlight-yellow { color: rgb(147, 147, 0) }
