@@ -1,5 +1,5 @@
-body { margin: 0 }
-p { font-weight: bold ; padding: 10px ; font-family: 'Georgia'; margin: 5px ; font-size: 15px }
+body { margin: 0 ; cursor: none ; line-height: 1.5 ; width: 90vw ; overflow-x: hidden }
+p { font-weight: bold ; padding: 10px ; font-family: 'Georgia'; font-size: 15px }
 
 .navigation {
     display: flex;
@@ -19,9 +19,13 @@ p { font-weight: bold ; padding: 10px ; font-family: 'Georgia'; margin: 5px ; fo
     color: #f7f7f7;
     text-decoration: none }
 
-a:hover { cursor: pointer ; color: gold ; text-decoration-line: underline ; text-underline-offset: 15px }
+a:hover { color: gold ; text-decoration-line: underline ; text-underline-offset: 15px }
 
-.bubble { width: 100vw ; display: flex ; align-items: center }
+.bubble { width: 100vw ; display: flex ; align-items: center ; transition: all 500ms ease ; padding: 10px 20px }
+
+.small:hover, .medium:hover, .big:hover, .giant:hover { -webkit-text-stroke: 0.2px rgba(255, 255, 255, 0.75) ; background-color: black ; letter-spacing: 2px }
+
+.giant { height: 1200px }
 
 .big { height: 800px }
 
@@ -31,7 +35,9 @@ a:hover { cursor: pointer ; color: gold ; text-decoration-line: underline ; text
 
 .chapter { height: 50px ; background-color: white ; letter-spacing: 4px ; font-family: Impact ; display: flex ; justify-content: center ; align-items: center }
 
-/* List of background colors: Add the appropriate class to an element to change the background color. */
+.title { font-size: 30px ; font-family: Impact ; letter-spacing: 2px }
+
+/* List of background colors */
 
 .grey { background-color: #5a5a5a90 }
 
@@ -55,6 +61,8 @@ a:hover { cursor: pointer ; color: gold ; text-decoration-line: underline ; text
 
 .highlight-blue { color: blue }
 
+.highlight-purple { color: purple }
+
 .highlight-red { color: rgb(167, 0, 0) }
 
 .highlight-orange { color: rgb(137, 89, 0) }
@@ -64,3 +72,5 @@ a:hover { cursor: pointer ; color: gold ; text-decoration-line: underline ; text
 .highlight-green { color: green }
 
 .highlight-yellow { color: rgb(147, 147, 0) }
+
+span { text-underline-offset: 2px }

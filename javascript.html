@@ -40,7 +40,7 @@
 
 
     <div class="chapter bubble">Chapter 2 - Intersection Observers</div>
-    <div class="small teal bubble">
+    <div class="medium teal bubble">
         <p>
             const <span class="highlight-orange">options</span> = { threshold: 1 , rootMargin: "0px 0px -100px 0px" };<br><br>
 
@@ -64,7 +64,8 @@
     <div class="chapter bubble">Chapter 3 - Stripe</div>
     <div class="small brown bubble">
         <p>
-            const <span class="highlight-red">stripe</span> = require("stripe")(process.ENV.STRIPE_PRIVATE_KEY);<br><br>
+            const <span class="highlight-red">stripe</span> = require("stripe")(process.ENV.STRIPE_PRIVATE_KEY);<br>
+            const <span class="highlight-green">button</span> = document.getElementById('checkout');<br><br>
 
             <span class="highlight-green">button</span>.addEventListener("click", () => {<br>
                 <span class="highlight-orange">fetch</span>('/checkout/path', {<br>
@@ -82,6 +83,57 @@
         <p>
             document.cookie = "(key)=(value) ; <span class="highlight-green">expires=(date)</span> ; <span class="highlight-red">path=(/path/here)</span>"<br><br>
             <span class="highlight-note">// Cookies do not have a delete function but can have the expiration updated to a past date to induce instant deletion</span><br>
+        </p>
+    </div>
+
+    <div class="chapter bubble">Chapter 5 - Arrays and Objects</div>
+    <div class="big green bubble"></div>
+
+    <div class="chapter bubble">Chapter 6 - Maps and Sets</div>
+    <div class="giant orange bubble">
+        <p>
+            <span class="highlight-green title">Maps</span><br>
+            const <span class="highlight-green">myMap</span> = <span class="highlight-red">new</span> <span class="highlight-green">Map()</span> Initialize new map object that only accepts key-value pairs<br>
+            <span class="highlight-green">myMap</span><span class="highlight-orange">.get(</span>key<span class="highlight-orange">)</span> <span class="highlight-blue">return</span> value associated with key<br>
+            <span class="highlight-green">myMap</span><span class="highlight-orange">.has(</span>key<span class="highlight-orange">)</span> <span class="highlight-blue">return</span> boolean<br>
+            <span class="highlight-green">myMap</span><span class="highlight-orange">.set(</span>key,value<span class="highlight-orange">)</span><br>
+            <span class="highlight-green">myMap</span><span class="highlight-orange">.delete(</span>key<span class="highlight-orange">)</span><br>
+            <span class="highlight-green">myMap</span><span class="highlight-orange">.keys()</span><br>
+            <span class="highlight-green">myMap</span><span class="highlight-orange">.values()</span><br>
+            <span class="highlight-green">myMap</span><span class="highlight-orange">.entries()</span> <span class="highlight-blue">return</span> all key-value pairs<br>
+            <span class="highlight-green">myMap</span><span class="highlight-orange">.size()</span><br>
+            <span class="highlight-green">myMap</span><span class="highlight-orange">.clear()</span><br>
+            <span class="highlight-note">// Chain methods together: map.set(x,y).set(x,y).set(x,y)</span><br>
+
+            <span class="highlight-yellow title">Sets</span><br>
+            const <span class="highlight-yellow">mySet</span> = <span class="highlight-red">new</span> <span class="highlight-yellow">Set()</span> Initialize new set that only accepts unique atomic values<br>
+            <span class="highlight-yellow">mySet</span><span class="highlight-orange">.add(</span>key<span class="highlight-orange">)</span> Attempting to add a value that already exists will fail<br>
+            <span class="highlight-yellow">mySet</span><span class="highlight-orange">.has(</span>value<span class="highlight-orange">)</span> <span class="highlight-blue">return</span> boolean<br>
+            <span class="highlight-yellow">mySet</span><span class="highlight-orange">.delete(value)</span><br>
+            <span class="highlight-yellow">mySet</span><span class="highlight-orange">.size()</span><br>
+            <span class="highlight-yellow">mySet</span><span class="highlight-orange">.clear()</span><br>
+            <span class="highlight-yellow">mySet</span><span class="highlight-orange">.forEach(value => { })</span><br>
+            <span class="highlight-note">// Chain methods together: map.set(x,y).set(x,y).set(x,y)</span><br>
+
+            <span class="highlight-purple title">Hash Maps</span><br>
+            <span class="highlight-note"> /<br>
+                i. Maximum of 1 value per key<br>
+                ii. Separate chaining elevates indexes to linked-lists within arrays<br>
+                /<br>
+                class <span class="highlight-purple">Map</span> {<br>
+                    constructor(<span class="highlight-purple">size</span>) { this.hashMap = new Array(<span class="highlight-purple">size</span>).fill(*).map(() => new Linkedlist()) }<br><br>
+                    hash(<span class="highlight-purple">key</span>) {<br>
+                        let <span class="highlight-red">hashCode</span> = '';<br>
+                        for (<span class="highlight-note">i in loop</span>) { <span class="highlight-red">hashCode</span> += <span class="highlight-red">hashCode</span> + <span class="highlight-purple">key</span>.charCodeAt(<span class="highlight-note">i</span>) }<br>
+                        return <span class="highlight-red">hashCode</span> }<br><br>
+                    assign(<span class="highlight-purple">key,value</span>) {<br> 
+                        const <span class="highlight-red">arrayIndex</span> = this.hash(<span class="highlight-purple">key</span>);<br>
+                        this.hashMap[<span class="highlight-red">arrayIndex</span>] = <span class="highlight-purple">value</span> }<br><br>
+                    retrieve(<span class="highlight-purple">key</span>) {<br> 
+                        const <span class="highlight-red">arrayIndex</span> = this.hash(<span class="highlight-purple">key</span>);<br>
+                        return this.hashMap[<span class="highlight-red">arrayIndex</span>]}<br><br>
+                }
+            </span>
         </p>
     </div>
     

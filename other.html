@@ -28,15 +28,73 @@
     </div>
 
 
-    <div class="chapter bubble">Chapter 2</div>
-    <div class="big green bubble"></div>
+    <div class="chapter bubble">Chapter 2 - Status Codes</div>
+    <div class="big green bubble">
+        <p>
+            <span class="title highlight-blue">[100]</span> INFORMATION<br>
+            <span class="highlight-blue"><u>100</u></span> Client should continue with the request<br>
+            <span class="highlight-blue"><u>102</u></span> Server is currently processing the request<br>
+
+            <span class="title highlight-green">[200]</span> SUCCESS<br>
+            <span class="highlight-green"><u>200</u></span> Request was executed successfully<br>
+            <span class="highlight-green"><u>201</u></span> A new rescource was created as the result of a <span class="highlight-green">POST</span> or <span class="highlight-green">PUT</span> request<br>
+            <span class="highlight-green"><u>202</u></span> Request was successful but further action is required <span class="highlight-note">// (middleware)</span><br>
+            <span class="highlight-green"><u>204</u></span> <span class="highlight-green">GET</span> request was successful but yielded no content <span class="highlight-note">// only headers returned</span><br>
+            <span class="highlight-green"><u>207</u></span> Multiple status codes have been associated with the request<br>
+
+            <span class="title highlight-orange">[300]</span> REDIRECTION<br>
+            <span class="highlight-orange"><u>301/308</u></span> Requested resource has been moved permanently<br>
+            <span class="highlight-orange"><u>302/307</u></span> Requested resource has been moved temporarily<br>
+
+            <span class="title highlight-red">[400]</span> CLIENT ERRORS<br>
+            <span class="highlight-red"><u>400</u></span> Server interprets client-side error as a bad request<br>
+            <span class="highlight-red"><u>401/403/423</u></span> Requested resource marked as unauthorized/locked<br>
+            <span class="highlight-red"><u>404</u></span> Valid endpoint however resource was not found<br>
+            <span class="highlight-red"><u>405</u></span> Specific method used in request was not allowed<br>
+            <span class="highlight-red"><u>406</u></span> No acceptable resource was found matching the parameters of the request<br>
+            <span class="highlight-red"><u>408</u></span> Request was timed out<br>
+            <span class="highlight-red"><u>415</u></span> Unsupported media type<br>
+            <span class="highlight-red"><u>429</u></span> Client has already sent more requests than server allows<br>
+
+            <span class="title highlight-purple">[500]</span> SERVER ERRORS<br>
+            <span class="highlight-purple"><u>500</u></span> Internal server error occured<br>
+            <span class="highlight-purple"><u>501</u></span> Server does not contain logic to recognize the method used by the request<br>
+            <span class="highlight-purple"><u>502</u></span> Gateway server recieved a bad response<br>
+            <span class="highlight-purple"><u>503</u></span> Server is down and service is unavailable<br>
+            <span class="highlight-purple"><u>504</u></span> Gateway server was timed out<br>
+            <span class="highlight-purple"><u>505</u></span> HTTP version is not supported<br>
+            <span class="highlight-purple"><u>511</u></span> Network authentication required<br>
+        </p>
+    </div>
 
 
     <div class="chapter bubble">Chapter 3</div>
     <div class="small blue bubble"></div>
 
 
-    <div class="chapter bubble">Chapter 4</div>
-    <div class="big pink bubble"></div>
+    <div class="chapter bubble">Chapter 4 - Regular Expressions</div>
+    <div class="big pink bubble">
+        <p>
+            let <span class="highlight-green">regex</span> = <span class="highlight-red">new</span> <span class="highlight-green">RegExp(<span class="highlight-note">"text-expression"</span>)</span>;
+            <span class="highlight-note">// second optional arguments:
+            i=> case sensitive /
+            g=> priority match all / 
+            m=> run on a multi-line expression </span><br><br>
+            <span class="highlight-green">regex</span>.exec(<span class="highlight-note">"text-expression"</span>) ?? "no matched results";<br>
+            <span class="highlight-green">regex</span>.test(<span class="highlight-note">"text-expression"</span>) <span class="highlight-note">// similar to exec but only returns a boolean</span><br>
+            <span class="highlight-green">[abc]</span> text matches any individual character: <span class="highlight-green">a</span>, <span class="highlight-green">b</span> or <span class="highlight-green">c</span><br>
+            <span class="highlight-green">[<span class="highlight-red">^</span>abc]</span> text matches any individual character <span class="highlight-red">except</span>  <span class="highlight-green">a</span>, <span class="highlight-green">b</span> or <span class="highlight-green">c</span><br>
+            <span class="highlight-green">a</span>|<span class="highlight-green">b</span> text matches either <span class="highlight-green">a</span> or <span class="highlight-green">b</span><br>
+            <span class="highlight-green">[0-9][a-g][A-Za-z]</span> text matches any character between the range of specified characters<br>
+            <span class="highlight-green">\w\d\s</span> text contains any letter, digit or whitespace respectively at this character<br>
+            <span class="highlight-green">\W\D\S</span> text <span class="highlight-red">does not</span> contain any letter, digit or whitespace respectively at this character<br>
+            <span class="highlight-red">.</span> text matches <span class="highlight-red">any</span> given character<br>
+            <span class="highlight-green">a<span class="highlight-red">?</span></span> text matches <span class="highlight-red">either</span> one instance or zero instances of <span class="highlight-green">a</span><br>
+            <span class="highlight-green">a<span class="highlight-red">+</span> a<span class="highlight-red">*</span></span> text matches one instance or zero instances of <span class="highlight-green">a</span> respectively<br>
+            <span class="highlight-green">a{<span class="highlight-red">n</span>}</span> text matches instance of <span class="highlight-green">a</span> that repeats exactly <span class="highlight-red">n</span> times in a row<br>
+            <span class="highlight-green">a{<span class="highlight-red">m</span>,<span class="highlight-red">n</span>}</span> text matches instance of <span class="highlight-green">a</span> repeated between <span class="highlight-red">m</span> and <span class="highlight-red">n</span> times in a row<br>
+            <span class="highlight-red">^</span><span class="highlight-note">string</span><span class="highlight-red">$</span> only consider text that matches <span class="highlight-note">string</span> exactly as literally expressed // <span class="highlight-note">failsafe mode</span>
+        </p>
+    </div>
 </body>
 </html>
