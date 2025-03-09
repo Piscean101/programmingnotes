@@ -68,21 +68,21 @@
     </div>
 
 
-    <div class="chapter bubble">Chapter 3</div>
+    <div class="chapter bubble">Chapter 3 - Typescript</div>
     <div class="small blue bubble"></div>
 
 
     <div class="chapter bubble">Chapter 4 - Regular Expressions</div>
-    <div class="big pink bubble">
+    <div class="medium pink bubble">
         <p>
-            let <span class="highlight-green">regex</span> = <span class="highlight-red">new</span> <span class="highlight-green">RegExp(<span class="highlight-note">"text-expression"</span>)</span>;
+            let <span class="highlight-green">regex</span> = <span class="highlight-red">new</span> <span class="highlight-green">RegExp(<span class="highlight-note">"expression"</span>)</span>;
             <span class="highlight-note">// second optional arguments:
             i=> case sensitive /
             g=> priority match all / 
             m=> run on a multi-line expression </span><br><br>
-            <span class="highlight-green">regex</span>.exec(<span class="highlight-note">"text-expression"</span>) ?? "no matched results";<br>
-            <span class="highlight-green">regex</span>.test(<span class="highlight-note">"text-expression"</span>) <span class="highlight-note">// similar to exec but only returns a boolean</span><br>
-            <span class="highlight-green">[abc]</span> text matches any individual character: <span class="highlight-green">a</span>, <span class="highlight-green">b</span> or <span class="highlight-green">c</span><br>
+            <span class="highlight-green">regex</span>.exec(<span class="highlight-note">"text"</span>) <span class="highlight-blue">??</span> "no matched results";<br>
+            <span class="highlight-green">regex</span>.test(<span class="highlight-note">"text"</span>) <span class="highlight-note">// similar to exec but only returns a boolean</span><br>
+            <span class="highlight-green">[abc]</span> text matches any individual character <span class="highlight-green">a</span>, <span class="highlight-green">b</span> or <span class="highlight-green">c</span><br>
             <span class="highlight-green">[<span class="highlight-red">^</span>abc]</span> text matches any individual character <span class="highlight-red">except</span>  <span class="highlight-green">a</span>, <span class="highlight-green">b</span> or <span class="highlight-green">c</span><br>
             <span class="highlight-green">a</span>|<span class="highlight-green">b</span> text matches either <span class="highlight-green">a</span> or <span class="highlight-green">b</span><br>
             <span class="highlight-green">[0-9][a-g][A-Za-z]</span> text matches any character between the range of specified characters<br>
@@ -94,6 +94,28 @@
             <span class="highlight-green">a{<span class="highlight-red">n</span>}</span> text matches instance of <span class="highlight-green">a</span> that repeats exactly <span class="highlight-red">n</span> times in a row<br>
             <span class="highlight-green">a{<span class="highlight-red">m</span>,<span class="highlight-red">n</span>}</span> text matches instance of <span class="highlight-green">a</span> repeated between <span class="highlight-red">m</span> and <span class="highlight-red">n</span> times in a row<br>
             <span class="highlight-red">^</span><span class="highlight-note">string</span><span class="highlight-red">$</span> only consider text that matches <span class="highlight-note">string</span> exactly as literally expressed // <span class="highlight-note">failsafe mode</span>
+        </p>
+    </div>
+    <div class="chapter bubble">Chapter 5 - MongoDB</div>
+    <div class="medium red bubble">
+        <p>
+            <span class="highlight-green">use</span> <span class="highlight-note">database_name</span> Navigate to a database<br>
+            <span class="highlight-red">.count()</span><br>
+            <span class="highlight-red">.limit()</span><br>
+            <span class="highlight-red">.pretty()</span><br>
+            <span class="highlight-green">show dbs</span> Show all databases<br>
+            <span class="highlight-green">show collections</span> Show all collections<br>
+            <span class="highlight-green">cls</span> Clear Terminal<br>
+            <span class="highlight-orange">$gt $gte $lt $lte $ne</span> Greater than / Greater or equal / Lesser than / Lesser or Equal / Non-Equal respectively<br>
+            <span class="highlight-orange">$exists $and $or</span> More logical operators<br><br>
+            <span class="highlight-green">db.</span><span class="highlight-note">collection_name</span><span class="highlight-green">.find(<span class="highlight-red">**</span>).sort(<span class="highlight-purple">**</span>)</span><br>
+            <span class="highlight-red">**</span> {<span class="highlight-note">key</span>: <span class="highlight-note">value</span>} Return only matching values<br> 
+            <span class="highlight-red">**</span> {<span class="highlight-note">key</span>: {<span class="highlight-orange">$gt:</span><span class="highlight-note">#</span>} } Return all instances where value is greater than<br> 
+            <span class="highlight-red">**</span> {"<span class="highlight-note">object.key</span>": "<span class="highlight-note">value</span>"} Search an embedded document<br>  
+            <span class="highlight-red">**</span> {<span class="highlight-note">...</span>}, {<span class="highlight-note">key</span>: <span class="highlight-red">0</span>/<span class="highlight-red">1</span>} 0: Do not return this field 1: Only return this field<br>
+            <span class="highlight-purple">**</span> {"<span class="highlight-note">key1</span>": <span class="highlight-red">1</span>, <span class="highlight-note">key2</span>": <span class="highlight-red">-1</span>} Return collection with key2 descending in context of key1 ascending<br>
+            <span class="highlight-green">db.</span><span class="highlight-note">collection_name</span><span class="highlight-green">.insertOne()</span> Creates a collection if not already existing an inserts into it<br>
+            <span class="highlight-green">db.</span><span class="highlight-note">collection_name</span><span class="highlight-green">.insertMany(<span class="highlight-orange">[...], { ordered: true }</span>)</span><br>
         </p>
     </div>
 </body>
