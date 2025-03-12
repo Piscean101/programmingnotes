@@ -97,7 +97,7 @@
         </p>
     </div>
     <div class="chapter bubble">Chapter 5 - MongoDB</div>
-    <div class="medium red bubble">
+    <div class="medium yellow bubble">
         <p>
             <span class="highlight-green">use</span> <span class="highlight-note">database_name</span> Navigate to a database<br>
             <span class="highlight-red">.count()</span><br>
@@ -116,6 +116,43 @@
             <span class="highlight-purple">**</span> {"<span class="highlight-note">key1</span>": <span class="highlight-red">1</span>, <span class="highlight-note">key2</span>": <span class="highlight-red">-1</span>} Return collection with key2 descending in context of key1 ascending<br>
             <span class="highlight-green">db.</span><span class="highlight-note">collection_name</span><span class="highlight-green">.insertOne()</span> Creates a collection if not already existing an inserts into it<br>
             <span class="highlight-green">db.</span><span class="highlight-note">collection_name</span><span class="highlight-green">.insertMany(<span class="highlight-orange">[...], { ordered: true }</span>)</span><br>
+        </p>
+    </div>
+    <div class="chapter bubble">Chapter 6 - PHP</div>
+    <div class="giant red bubble">
+        <p>
+        <span class="title highlight-purple">Methods</span><br>
+        <span class="highlight-green">$var</span> = <span class="highlight-green">readline()</span> Save user input to variable<br>
+        <span class="highlight-purple">intval(<span class="highlight-green">readline()</span>)</span> = Convert user input from string to integer<br>
+        <span class="highlight-purple">gettype(<span class="highlight-green">$var</span>)</span> Return the type of variable provided<br>
+        <span class="highlight-purple">var_dump(<span class="highlight-green">$var</span>)</span> Return all info related to variable including string length, value etc.<br>
+        <span class="highlight-purple">rand(<span class="highlight-note">[min_num]</span>,<span class="highlight-note">[max_num]</span>)</span> Return random integer between min and max (inclusive) <span class="highlight-note">[optional]</span><br>
+        <span class="highlight-purple">round(<span class="highlight-note">1.7</span>)</span> Result: 2<br>
+        <span class="highlight-purple">abs(<span class="highlight-note">-5</span>)</span> Result: 5<br><br>
+        <span class="highlight-green">$standard_array</span> = array(<span class="highlight-note">element, element</span>) Create an ordered array<br>
+        <span class="highlight-green">$short_form_array</span> = [<span class="highlight-note">element, element</span>] <br>
+        <span class="highlight-green">$array_1</span> = <span class="highlight-green">$array_2</span> Copy array values that are independent of each other<br>
+        <span class="highlight-green">$array_1</span> =& <span class="highlight-green">$array_2</span> References 2 arrays that will always be identical<br>
+        <span class="highlight-purple">count(<span class="highlight-green">$array</span>)</span> Print array length<br>
+        <span class="highlight-purple">print_r(<span class="highlight-green">$array</span>)</span> Print array contents as dropping list of index-value pairs<br>
+        <span class="highlight-purple">array_push(<span class="highlight-green">$array</span>, <span class="highlight-note">element</span>)</span></span> <span class="highlight-purple">array_pop(<span class="highlight-green">$array</span>)</span> Add to or remove elements from end of array<br>
+        <span class="highlight-purple">array_unshift(<span class="highlight-green">$array</span>, <span class="highlight-note">element</span>)</span></span> <span class="highlight-purple">array_shift(<span class="highlight-green">$array</span>)</span> Add to or remove elements from beginning of array<br>
+        <span class="highlight-purple">unset(<span class="highlight-green">$array[<span class="highlight-note">"key"</span>]</span>)</span></span> Remove a key-value pair from anywhere in the array<br>
+        <span class="highlight-purple">ucfirst(<span class="highlight-green">$string</span>)</span></span> Capitalize first letter of the string without permanently modifying string<br><br>
+        <span class="highlight-purple">strrev(<span class="highlight-note">"message"</span>)</span> Result: "egassem"<br>
+        <span class="highlight-purple">str_repeat(<span class="highlight-note">"blue"</span>, 5)</span> Result: "blueblueblueblueblue"<br>
+        <span class="highlight-purple">strtolower(<span class="highlight-note">"Hello"</span>)</span> <span class="highlight-purple">strtoupper(<span class="highlight-note">"Hello"</span>)</span> Result: "hello" "HELLO"<br>
+        <span class="highlight-purple">substr_count(<span class="highlight-green">$string</span>, <span class="highlight-note">"test</span>)</span> Return # of times "test" is found in string<br>
+        <span class="title highlight-orange">Classes and Objects</span><br>
+        <span class="highlight-orange">class Pet { <span class="highlight-blue">public</span> <span class="highlight-green">$name, $breed, $favoriteFood</span> }</span> // <span class="highlight-blue">public</span> can be accessed by all objects meanwhile <span class="highlight-blue">private</span> is restricted and <span class="highlight-blue">protected</span> is limited to child instances<br>
+        <span class="highlight-green">$good_girl</span> = new <span class="highlight-orange">Pet()</span><br>
+        <span class="highlight-green">$good_girl</span>->name = 'Ginger'<br>
+        echo <span class="highlight-green">$good_girl</span>->name<br><br>
+        <span class="highlight-orange">class Country { <span class="highlight-blue">public</span> <span class="highlight-green">$name, $population</span><br>
+            <span class="highlight-purple">function __contruct()</span> {...}<br>
+            <span class="highlight-purple">function getInfo()</span> { return $this-><span class="highlight-green">name</span> . " " . $this-><span class="highlight-green">population</span> } }</span><br><br>
+        <span class="highlight-green">$canada</span> = new <span class="highlight-orange">Country()</span><br>
+        <span class="highlight-green">$canada</span>-><span class="highlight-purple">getInfo()</span>
         </p>
     </div>
 </body>

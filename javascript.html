@@ -66,7 +66,12 @@
     </div>
 
     <div class="chapter bubble">Chapter 4 - Arrays and Objects</div>
-    <div class="big green bubble"></div>
+    <div class="small green bubble">
+        <p>
+            <span class="title highlight-red">Arrays</span><br>
+            var reducer = <span class="highlight-red">array_name</span><span class="highlight-boo">.reduce((acc,current) => acc + current, <span class="highlight-blue">[initial]</span>)</span> Returns the sum of values in the array [+ optional initial value]
+        </p>
+    </div>
 
     <div class="chapter bubble">Chapter 5 - Maps and Sets</div>
     <div class="giant orange bubble">
@@ -135,6 +140,20 @@
                         <span class="highlight-red">lastScroll</span> = <span class="highlight-green">currentScroll</span> });<br>
         </p>
     </div>
-    
+    <div class="chapter bubble">Chapter 7 - Graph Traversal</div>
+    <div class="medium blue bubble">
+        <p>
+            <span class="highlight-orange title">Breadth First Search</span><br>
+            USING A <span class="highlight-orange">QUEUE</span>:<br>
+            <span class="highlight-orange">i.</span> Check starting Node, add children to <span class="highlight-orange">queue</span> if not visited already.<br>
+            <span class="highlight-orange">ii.</span> Shift() <span class="highlight-orange">queue</span>, check the returned value, add children to <span class="highlight-orange">queue</span> if not visited already.<br>
+            <span class="highlight-orange">iii.</span> Continue until <span class="highlight-orange">queue</span> is empty.<br><br>
+            <span class="highlight-blue title">Depth First Search</span><br>
+            USING A <span class="highlight-blue">STACK</span>:<br>
+            <span class="highlight-blue">i.</span> Check starting Node, add children to <span class="highlight-blue">stack</span> if not already visited.<br>
+            <span class="highlight-blue">iia.</span> Pop() stack, if children do exist and have not been visited, add them to <span class="highlight-blue">stack</span>.<br>
+            <span class="highlight-blue">iib.</span> If no children exist, pop() <span class="highlight-blue">stack</span>.<br><br>
+        </p>
+    </div>
 </body>
 </html>

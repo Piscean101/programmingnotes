@@ -30,7 +30,7 @@
 
 
     <div class="chapter bubble">Chapter 2 - Uncommon Rules & Properties</div>
-    <div class="medium pink bubble">
+    <div class="big pink bubble">
         <p>
             <span class="highlight-blue">document.querySelectorAll(<span class="highlight-note">'[attr="value"]'</span>)</span><br>
             <span class="highlight-blue">writing-mode:</span> <span class="highlight-yellow">vertical</span> Text becomes oriented on y-axis<br>
@@ -40,7 +40,7 @@
             <span class="highlight-blue">-webkit-background-clip:</span> <span class="highlight-yellow">text</span> Clips background to text outline<br>
             <span class="highlight-blue">-webkit-text-fill-color:</span> <span class="highlight-yellow">transparent</span> Pair with a gradient background<br>
             <span class="highlight-green">:root { <span class="highlight-blue">--color-name: <span class="highlight-note">rgba</span></span> }; </span><span class="highlight-green">#element { <span class="highlight-blue">color: var(--clr-name)</span> }</span> Declare a universal variable and access it within another rule's properties<br>
-            <span class="highlight-green">:root</span><span class="highlight-blue">:has(<span class="highlight-yellow">#element: checked</span>) {<span class="highlight-note">...</span>}</span><br>
+            <span class="highlight-green">:root</span><span class="highlight-blue">:has(<span class="highlight-yellow">#element: checked</span>) {<span class="highlight-note">...</span>}</span> Control entire page themes from a single endpoint<br>
             <span class="highlight-blue">filter:</span> 
             <span class="highlight-yellow">grayscale(<i class="highlight-note">%</i>)</span> 
             <span class="highlight-yellow">contrast(<i class="highlight-note">%</i>)</span> 
@@ -51,7 +51,32 @@
             <span class="highlight-yellow">blur(<i class="highlight-note">px</i>)</span>
             <span class="highlight-yellow">drop-shadow(<i class="highlight-note">px px px rgb</i>)</span> 
             <span class="highlight-yellow">brightness(<i class="highlight-note">#</i>)</span> 
-            <span class="highlight-yellow">hue-rotate(<i class="highlight-note">#deg</i>)</span><br>
+            <span class="highlight-yellow">hue-rotate(<i class="highlight-note">#deg</i>)</span><br><br>
+            <span class="block">
+                <span class="title highlight-green">Color Themes</span><br>
+                const <span class="highlight-blue">storeTheme</span> = function(<span class="highlight-green">theme</span>) { localStorage.setItem(<span class="highlight-note">"theme_name"</span>,<span class="highlight-green">theme</span>) }<br><br>
+                const <span class="highlight-blue">setTheme</span> = function() {<br><br>
+                    const <span class="highlight-green">activeTheme</span> = localStorage.getItem(<span class="highlight-note">"theme_name"</span>);<br><br>
+                    const <span class="highlight-green">colorThemes</span> = document.getElementById(<span class="highlight-note">"color_themes"</span>);<br><br>
+                    <span class="highlight-green">colorThemes</span>.forEach((<span class="highlight-orange">themeOption</span>) => {<br>
+                        if (<span class="highlight-orange">themeOption</span>.id === <span class="highlight-green">activeTheme</span>) {<br>
+                            <span class="highlight-orange">themeOption</span>.checked = true }<br>
+                        })<br><br>
+                        <span class="highlight-green">colorThemes</span>.forEach((<span class="highlight-orange">themeOption</span>) => {<br>
+                            <span class="highlight-orange">themeOption</span>.addEventListener("click", => { <span class="highlight-blue">storeTheme(<span class="highlight-orange">themeOption</span>.id)</span> }) <br>
+                            })<br><br>
+                    }
+                </span>
+            <span class="block">
+                <span class="title highlight-red">Horizontal Scroll</span><br>
+                <span class="highlight-red">display:</span> grid;<br>
+                <span class="highlight-red">grid-auto-flow:</span> column;<br>
+                <span class="highlight-red">grid-auto-columns:</span> % ;<br>
+                <span class="highlight-red">grid-template-columns:</span> % / px ;<br>
+                <span class="highlight-red">overscroll-behavior-inline:</span> contain;<br>
+                <span class="highlight-red">scroll-snap-type:</span> inline mandatory;<br><br>
+                <span class="highlight-green">.child {<span class="highlight-red">scroll-snap-align:</span> start<br>}</span><br>
+            </span>
         </p>
     </div>
 

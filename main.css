@@ -1,5 +1,6 @@
 body { margin: 0 ; cursor: none ; line-height: 1.5 ; width: 90vw ; overflow-x: hidden }
-p { font-weight: bold ; padding: 10px ; font-family: 'Calibri'; font-size: 17px }
+p { font-weight: bold ; padding: 10px ; font-family: consolas ; font-size: 17px }
+.block { font-weight: bold ; font-family: Calibri ; background-color: rgba(100, 100, 100,0.25) ; padding: 15px ; border-radius: 15px ; font-size: 12px ; display: inline-block }
 
 .navigation {
     display: flex;
