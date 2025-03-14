@@ -18,23 +18,13 @@
         <a href="other.html"><p>OTHER</p></a>
     </div>
 
-    <div class="chapter bubble">Chapter 1 - Infinite Scrolling</div>
-    <div class="medium purple bubble">
+    <div class="chapter bubble">Chapter 1 - Arrays and Objects</div>
+    <div class="small green bubble">
         <p>
-            const <span class="highlight-green">url</span> = 'path/to/be/manipulated/'; <span class="highlight-note">// This path must produce an image whenever a number is attached to the end of it</span><br>
-            const <span class="highlight-green">container</span> = document.querySelector('.container');<br><br>
-            function <span class="highlight-green">getRandomNumber() </span>{...}<br><br>
-            function <span class="highlight-green">loadImages(<span class="highlight-red">num</span><span class="highlight-note">=#</span>) {</span><br>
-                let <span class="highlight-green">i</span> = 0;<br>
-                while(<span class="highlight-green">i</span> <= <span class="highlight-red">num</span>) {<br>
-                    const <span class="highlight-green">img</span> = document.createElement('img');<br>
-                    <span class="highlight-green">img</span>.src = `${<span class="highlight-green">url</span>}${<span class="highlight-green">getRandomNumber()</span>}`;<br>
-                    <span class="highlight-green">container</span>.appendChild(<span class="highlight-green">img</span>); <span class="highlight-green">i++</span> }<br>
-                    <span class="highlight-green">}</span><br><br>
-            window.addEventListener('scroll', () => { if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) { <span class="highlight-green">loadImages()</span> } })<br><br>
+            <span class="title highlight-red">Arrays</span><br>
+            var reducer = <span class="highlight-red">array_name</span><span class="highlight-boo">.reduce((acc,current) => acc + current, <span class="highlight-blue">[initial]</span>)</span> Returns the sum of values in the array <span class="highlight-note">[+ optional initial value]</span>
         </p>
     </div>
-
 
     <div class="chapter bubble">Chapter 2 - Intersection Observers</div>
     <div class="medium teal bubble">
@@ -57,7 +47,7 @@
     <div class="chapter bubble">Chapter 3 - Cookies & Process Environments</div>
     <div class="small blue bubble">
         <p>
-            document.cookie = "(key)=(value) ; <span class="highlight-green">expires=(date)</span> ; <span class="highlight-green">path=(/path/here)</span>"<br><br>
+            document.cookie = "(key)=(value) ; <span class="highlight-blue">expires=(date)</span> ; path=(/path/here)"<br><br>
             <span class="highlight-note">// Cookies do not have a delete function but can have the expiration updated to an already passed date for an instakill</span><br><br>
             require("dotenv").config(); const http = require('http');<br>
             const port = parseInt(process.env.PORT) || 5000;<br>
@@ -65,11 +55,20 @@
        </p>
     </div>
 
-    <div class="chapter bubble">Chapter 4 - Arrays and Objects</div>
-    <div class="small green bubble">
+    <div class="chapter bubble">Chapter 4 - Infinite Scrolling</div>
+    <div class="medium purple bubble">
         <p>
-            <span class="title highlight-red">Arrays</span><br>
-            var reducer = <span class="highlight-red">array_name</span><span class="highlight-boo">.reduce((acc,current) => acc + current, <span class="highlight-blue">[initial]</span>)</span> Returns the sum of values in the array [+ optional initial value]
+            const <span class="highlight-green">url</span> = 'path/to/be/manipulated/'; <span class="highlight-note">// This path must produce an image whenever a number is attached to the end of it</span><br>
+            const <span class="highlight-green">container</span> = document.querySelector('.container');<br><br>
+            function <span class="highlight-purple">getRandomNumber() </span>{<span class="highlight-note">// return a random integer</span>}<br><br>
+            function <span class="highlight-purple">loadImages(<span class="highlight-red">num</span>) {</span><br>
+                let <span class="highlight-green">i</span> = 0;<br>
+                while(<span class="highlight-green">i</span> <= <span class="highlight-red">num</span> && <span class="highlight-red">num</span> > 0) {<br>
+                    const <span class="highlight-green">img</span> = document.createElement('img');<br>
+                    <span class="highlight-green">img</span>.src = `${<span class="highlight-green">url</span>}${<span class="highlight-purple">getRandomNumber()</span>}`;<br>
+                    <span class="highlight-green">container</span>.appendChild(<span class="highlight-green">img</span>); <span class="highlight-green">i++</span> }<br>
+                    <span class="highlight-purple">}</span><br><br>
+            window.addEventListener('scroll', () => { if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) { <span class="highlight-purple">loadImages()</span> } })<br><br>
         </p>
     </div>
 
@@ -93,10 +92,10 @@
             const <span class="highlight-yellow">mySet</span> = <span class="highlight-red">new</span> <span class="highlight-yellow">Set()</span> Initialize new set that only accepts unique atomic values<br>
             <span class="highlight-yellow">mySet</span><span class="highlight-orange">.add(</span>key<span class="highlight-orange">)</span> Attempting to add a value that already exists will fail<br>
             <span class="highlight-yellow">mySet</span><span class="highlight-orange">.has(</span>value<span class="highlight-orange">)</span> <span class="highlight-blue">return</span> boolean<br>
-            <span class="highlight-yellow">mySet</span><span class="highlight-orange">.delete(value)</span><br>
+            <span class="highlight-yellow">mySet</span><span class="highlight-orange">.delete(</span>value<span class="highlight-orange">)</span><br>
             <span class="highlight-yellow">mySet</span><span class="highlight-orange">.size()</span><br>
             <span class="highlight-yellow">mySet</span><span class="highlight-orange">.clear()</span><br>
-            <span class="highlight-yellow">mySet</span><span class="highlight-orange">.forEach(value => { })</span><br>
+            <span class="highlight-yellow">mySet</span><span class="highlight-orange">.forEach(</span>value<span class="highlight-orange"> => { })</span><br>
             <span class="highlight-note">// Chain methods together: map.set(x,y).set(x,y).set(x,y)</span><br>
 
             <span class="highlight-purple title">Hash Maps</span><br>

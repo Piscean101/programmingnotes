@@ -21,11 +21,11 @@
     <div class="chapter bubble">Chapter 1 - Lists</div>
     <div class="medium brown bubble">
         <p>
-            <span class="highlight-blue">list</span>.append(<span class="highlight-note">val</span>) Add val to end of list<br>
+            <span class="highlight-blue">list</span>.append(<span class="highlight-note">val</span>)<br>
+            <span class="highlight-blue">list</span>.pop(<span class="highlight-note">default = -1</span>)<br>
             <span class="highlight-blue">list</span>.remove(<span class="highlight-note">val</span>) Remove the first instance of val from the list<br>
             <span class="highlight-blue">list</span>.count(<span class="highlight-note">val</span>) Return # of instances val occurs in list<br>
-            <span class="highlight-blue">list</span>.pop(<span class="highlight-note">default = -1</span>) Remove and return item at index -1 by default<br>
-            <span class="highlight-blue">int(<span class="highlight-note">5.0</span>)</span> <span class="highlight-blue">int(<span class="highlight-note">5.7</span>)</span> Both eval to 5 since int only removes the decimal point, but does not round the number<br>
+            <span class="highlight-blue">int(<span class="highlight-note">5.0</span>)</span> <span class="highlight-blue">int(<span class="highlight-note">5.7</span>)</span> Both eval to 5 since int does not round the number<br>
             <span class="highlight-blue">list(<span class="highlight-red">range(<span class="highlight-note">0,50,3</span>)</span>)</span> Convert object into a list counting at a factor of 3 not including 50<br>
             <span class="highlight-green">print(<span class="highlight-blue">list(<span class="highlight-red">range(<span class="highlight-note">3,15</span>)[<span class="highlight-note">4</span>]</span>)</span>)</span> Print index 4 of a list from range 3->15 <span class="highlight-note">excluding 15</span><br>
             <span class="highlight-blue">len(<span class="highlight-red">list_var</span>)</span> Returns the length <span class="highlight-note">(# of entries)</span> of list_var<br>
@@ -40,8 +40,8 @@
     <div class="small green bubble">
         <p>
             <span class="highlight-red">new_tuple = (<span class="highlight-note">1,2,3,'Bob'</span>)</span> Immutable group of elements<br>
-            <span class="highlight-red">a, b, c, d = new_tuple</span> Assign new_tuple elements to new respective variable<br>
-            <span class="highlight-red">mixed_array = <span class="highlight-blue">zip(<span class="highlight-note">a_1,a_2</span>)</span></span> a_1, a_2 mix into array of tuple pairs <span class="highlight-note">list(mixed_array) is required to convert the zip object</span><br>
+            <span class="highlight-red">a, b, c, d = new_tuple</span> Assign the elements of new_tuple to new variables<br>
+            <span class="highlight-red">mixed_array = <span class="highlight-blue">zip(<span class="highlight-note">a_1,a_2</span>)</span></span> a_1 and a_2 array contents mix into an array of tuple pairs <span class="highlight-note">list(mixed_array) is required to convert the zip object</span><br>
             
         </p>
     </div>
@@ -50,7 +50,7 @@
     <div class="chapter bubble">Chapter 3 - Strings</div>
     <div class="small teal bubble">
         <p>
-            <span class="highlight-blue">'''</span> Triple quotes designate a string that spans multiple lines<br>
+            my_string = <span class="highlight-blue">''<span class="highlight-note">...</span>''</span> or <span class="highlight-blue">'''<span class="highlight-note">...</span>'''</span> Triple quote strings can span multiple lines<br>
             <span class="highlight-blue">[delimiter]</span><span class="highlight-orange">.join(<span class="highlight-note">array / list</span>)</span> Split object using delimiter into list of sub-strings <span class="highlight-note">delimiter can be empty space ie. ' '.join(...)</span><br>
             <span class="highlight-blue">string<span class="highlight-orange">.title</span></span> Uppercase the first letter of the first word<br>
             <span class="highlight-blue">string<span class="highlight-orange">.upper</span></span> Whole string uppercase<br>
@@ -67,10 +67,10 @@
     <div class="small grey bubble">
         <p>
             <span class="highlight-blue">library_name = {<span class="highlight-orange">"key":value,"key":value</span>}</span> Keys can only be numbers or strings<br>
-            <span class="highlight-blue">library_name[<span class="highlight-orange">"key"</span>] = </span><span class="highlight-green">value</span> Add single pair to library<br>
+            <span class="highlight-blue">library_name[<span class="highlight-note">"key"</span>] = </span><span class="highlight-orange">value</span><br>
             <span class="highlight-blue">library_name.update(<span class="highlight-orange">{...}</span>)</span> Add mini library to main library<br>
-            <span class="highlight-blue">comprehension_dictionary = {<span class="highlight-orange">key:value</span> for <span class="highlight-note">key,value</span> in zip(<span class="highlight-note">list,list</span>)}</span><br>
-            <span class="highlight-blue">library_name.keys()</span> <span class="highlight-blue">library_name.values()</span> Iterable objects of respective properties<br>
+            <span class="highlight-blue">comprehension_dictionary = {<span class="highlight-orange">key:value</span> for <span class="highlight-orange">key,value</span> in zip(<span class="highlight-note">list,list</span>)}</span><br>
+            <span class="highlight-blue">library_name.keys()</span> <span class="highlight-blue">library_name.values()</span><br>
             <span class="highlight-blue">for <span class="highlight-orange">key,value</span> in dict.items()</span> Iterate through tuples of pairs<br>
         </p>
     </div>
@@ -80,7 +80,7 @@
             <span class="highlight-blue">from <span class="highlight-note">library_name</span> import <span class="highlight-purple">module</span> <span class="highlight-note">[as alias]</span></span><br>
             <span class="highlight-blue">from <span class="highlight-purple">decimal</span> import <span class="highlight-purple">Decimal</span></span> Python does not recognize decimal by default<br>
             <span class="highlight-blue">datetime</span><br>
-            <span class="highlight-blue">random -> </span><span class="highlight-blue">random.choice(<span class="highlight-note">list</span>)</span> <span class="highlight-blue">random.randInt(<span class="highlight-note">min,max</span>)</span> <span class="highlight-blue">random.sample(<span class="highlight-note">range,selectionSize</span>)</span>
+            <span class="highlight-blue">random -> </span><span class="highlight-blue">random.choice(<span class="highlight-note">list</span>)</span> <span class="highlight-blue">random.randInt(<span class="highlight-note">min,max</span>)</span> <span class="highlight-blue">random.sample(<span class="highlight-note">range(),selectionSize</span>)</span>
         </p>
     </div>
     
