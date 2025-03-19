@@ -93,7 +93,7 @@
             <span class="highlight-green">a<span class="highlight-red">+</span> a<span class="highlight-red">*</span></span> text matches one instance or zero instances of <span class="highlight-green">a</span> respectively<br>
             <span class="highlight-green">a{<span class="highlight-red">n</span>}</span> text matches instance of <span class="highlight-green">a</span> that repeats exactly <span class="highlight-red">n</span> times in a row<br>
             <span class="highlight-green">a{<span class="highlight-red">m</span>,<span class="highlight-red">n</span>}</span> text matches instance of <span class="highlight-green">a</span> repeated between <span class="highlight-red">m</span> and <span class="highlight-red">n</span> times in a row<br>
-            <span class="highlight-red">^</span><span class="highlight-note">string</span><span class="highlight-red">$</span> only consider text that matches <span class="highlight-note">string</span> exactly as literally expressed // <span class="highlight-note">failsafe mode</span>
+            <span class="highlight-red">^</span><span class="highlight-note">string</span><span class="highlight-red">$</span> only consider text that matches <span class="highlight-note">string</span> exactly as literally expressed <span class="highlight-note">// failsafe mode</span>
         </p>
     </div>
     <div class="chapter bubble">Chapter 5 - MongoDB</div>
@@ -119,10 +119,15 @@
         </p>
     </div>
     <div class="chapter bubble">Chapter 6 - PHP</div>
-    <div class="giant red bubble">
+    <div class="massive red bubble">
         <p>
-        <span class="title highlight-purple">Methods</span><br>
+        <span class="highlight-red title">In the Terminal</span><br>
+        <span class="highlight-blue">php src/index.php</span><br>
+        <span class="title highlight-purple">Methods and Keywords</span><br>
+        <span class="highlight-blue">include</span> <span class="highlight-note">"file.php"</span> PHP equivalent for import<br>
         <span class="highlight-green">$var</span> = <span class="highlight-green">readline()</span> Save user input to variable<br>
+        <span class="highlight-blue">global</span> <span class="highlight-green">$var</span> Import a global variable into the local scope of a function<br>
+        <span class="highlight-orange">if (<span class="highlight-note">expression <span class="highlight-purple">xor</span> expression</span>)</span> Return true only when one expression is true but not both<br>
         <span class="highlight-purple">intval(<span class="highlight-green">readline()</span>)</span> = Convert user input from string to integer<br>
         <span class="highlight-purple">gettype(<span class="highlight-green">$var</span>)</span> Return the type of variable provided<br>
         <span class="highlight-purple">var_dump(<span class="highlight-green">$var</span>)</span> Return all info related to variable including string length, value etc.<br>
@@ -152,7 +157,41 @@
             <span class="highlight-purple">function __contruct()</span> {...}<br>
             <span class="highlight-purple">function getInfo()</span> { return $this-><span class="highlight-green">name</span> . " " . $this-><span class="highlight-green">population</span> } }</span><br><br>
         <span class="highlight-green">$canada</span> = new <span class="highlight-orange">Country()</span><br>
-        <span class="highlight-green">$canada</span>-><span class="highlight-purple">getInfo()</span>
+        <span class="highlight-green">$canada</span>-><span class="highlight-purple">getInfo()</span><br>
+        <span class="highlight-green title">PHP in HTML</span><br>
+        <span class="highlight-green">&lt;?php <span class="highlight-orange">for(<span class="highlight-green">$i</span>;<span class="highlight-green">$i</span>&lt;count(<span class="highlight-green">$var</span>);<span class="highlight-green">$i++</span>)</span> ?&gt;</span><br>
+        <span class="highlight-note">"html expression"</span><br>
+        <span class="highlight-green">&lt;?php <span class="highlight-blue">endfor</span> ?&gt;</span><br><br>
+        <span class="highlight-green">&lt;?php <span class="highlight-blue">echo</span> <span class="highlight-note">"html expression"</span> . <span class="highlight-note">"html expression"</span> ?></span><br>
+        <span class="highlight-purple">&lt;?=<span class="highlight-green">$var</span>?&gt;</span> Shorthand echo<br>
+        <span class="highlight-purple">&lt;h1&gt;</span><span class="highlight-green">${array[<span class="highlight-note">"key"</span>]}</span><span class="highlight-purple">&lt;h1&gt;</span> / <span class="highlight-green">${var}</span> / <span class="highlight-orange">function(<span class="highlight-green">$var</span>)</span> Include php within an <span class="highlight-note">"html expression"</span><br>
+        <span class="highlight-blue title">FORMS</span><br>
+        <span class="highlight-blue subtitle">SUPERGLOBALS</span><br>
+        <span class="highlight-blue">$GLOBALS</span><br>
+        <span class="highlight-blue">$_SERVER</span><br>
+        <span class="highlight-blue">$_GET</span> Array of variables passed to script using query parameters in URL<br>
+        <span class="highlight-blue">$_POST</span> Same as above but for POST requests<br>
+        <span class="highlight-blue">$_FILES</span><br>
+        <span class="highlight-blue">$_COOKIE</span><br>
+        <span class="highlight-blue">$_SESSION</span><br>
+        <span class="highlight-blue">$_REQUEST</span><br>
+        <span class="highlight-blue">$_ENV</span><br>
+        </p>
+    </div>
+    <div class="chapter bubble">Chapter 7 - Swift (IOS)</div>
+    <div class="medium teal bubble">
+        <p>
+            <span class="highlight-note">file_name.swift</span><br><br>
+            <span class="highlight-red title">DATA TYPES and VARIABLES</span><br>
+            <span class="highlight-orange">Int</span> integer<br>
+            <span class="highlight-orange">Double</span> decimal<br>
+            <span class="highlight-orange">String</span><br>
+            <span class="highlight-orange">Bool</span> true or false<br>
+            <span class="highlight-green">var <span class="highlight-note">keyword</span> = value</span> <br>
+            <span class="highlight-green">let <span class="highlight-note">keyword</span> = value</span> Denotes a <u>constant</u> variable in Swift<br>
+            <span class="highlight-green">var <span class="highlight-note">keyword</span>:<span class="highlight-orange">Int</span> = value</span> Return false unless input is of type <span class="highlight-orange">Int</span><br>
+            <span class="highlight-red title">STRING INTERPOLATION</span><br>
+            <span class="highlight-red">print(<span class="highlight-note">"This is \(<span class="highlight-green">keyword</span>) interpolation in Swift"</span>)</span>
         </p>
     </div>
 </body>

@@ -74,15 +74,50 @@
             <span class="highlight-blue">for <span class="highlight-orange">key,value</span> in dict.items()</span> Iterate through tuples of pairs<br>
         </p>
     </div>
-    <div class="chapter bubble">Chapter 5 - Modules</div>
+    <div class="chapter bubble">Chapter 5 - Imports</div>
     <div class="small yellow bubble">
         <p>
             <span class="highlight-blue">from <span class="highlight-note">library_name</span> import <span class="highlight-purple">module</span> <span class="highlight-note">[as alias]</span></span><br>
             <span class="highlight-blue">from <span class="highlight-purple">decimal</span> import <span class="highlight-purple">Decimal</span></span> Python does not recognize decimal by default<br>
             <span class="highlight-blue">datetime</span><br>
-            <span class="highlight-blue">random -> </span><span class="highlight-blue">random.choice(<span class="highlight-note">list</span>)</span> <span class="highlight-blue">random.randInt(<span class="highlight-note">min,max</span>)</span> <span class="highlight-blue">random.sample(<span class="highlight-note">range(),selectionSize</span>)</span>
+            <span class="highlight-blue">random -> </span><span class="highlight-blue">random.choice(<span class="highlight-note">list</span>)</span> <span class="highlight-blue">random.randInt(<span class="highlight-note">min,max</span>)</span> <span class="highlight-blue">random.sample(<span class="highlight-note">range(),selectionSize</span>)</span><br><br>
+            <span class="highlight-blue">with <span class="highlight-green">open(<span class="highlight-note">'filename.txt'</span>)</span> as <span class="highlight-red">docu</span></span><br>
+            <span class="highlight-blue">with <span class="highlight-green">open(<span class="highlight-note">'filename.txt','w'</span>)</span> as <span class="highlight-red">wri</span></span> Opens writable version of document <span class="highlight-note">'w' = overwrite 'a' = append</span><br>
+            <span class="highlight-red">contents</span> = <span class="highlight-red">docu</span><span class="highlight-green">.read()</span>
         </p>
     </div>
-    
+    <div class="chapter bubble">Chapter 6 - Classes</div>
+    <div class="small orange bubble">
+        <p>
+            <span class="highlight-green">self</span> Standard parameter for methods within classes<br>
+            <span class="highlight-blue space">def__init__()</span> Constructors but for Python<br>
+            <span class="highlight-blue space">def__repr__()</span> Constructors but for Python<br>
+        </p>
+    </div>
+    <div class="chapter bubble">Chapter 7 - CSV (Comma Separated Values)</div>
+    <div class="big brown bubble">
+        <p>
+            <span class="highlight-green title">Files</span><br>
+            <span class="highlight-blue">import</span> <span class="highlight-purple">csv</span><br>
+            <span class="highlight-blue">with <span class="highlight-green">open(<span class="highlight-note">'filename.txt'</span>, newline='')</span> as <span class="highlight-green">var:</span></span><br>
+            &nbsp;&nbsp;<span class="highlight-green">reader</span> = <span class="highlight-purple">csv</span>.DictReader(<span class="highlight-green">var</span><span class="highlight-note">,[delimiter=',']</span>)<br>
+            &nbsp;&nbsp;<span class="highlight-blue">for <span class="highlight-green">row</span> in <span class="highlight-green">reader:</span></span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="highlight-green">print(row[<span class="highlight-note">'key'</span>])</span><br><br>
+            <span class="highlight-blue">with <span class="highlight-green">open(<span class="highlight-note">'output.csv','w'</span>)</span> as <span class="highlight-green">var:</span></span><br>
+            &nbsp;&nbsp;<span class="highlight-green">fields = [<span class="highlight-note">"list","of","field","names"</span>]</span><br>
+            &nbsp;&nbsp;<span class="highlight-green">output =</span> <span class="highlight-purple">csv</span>.DictWriter(<span class="highlight-green">var</span>, fieldnames = <span class="highlight-green">fields</span>)<br>
+            &nbsp;&nbsp;<span class="highlight-green">output</span>.writeheader()<br>
+            &nbsp;&nbsp;<span class="highlight-blue">for <span class="highlight-green">item</span> in <span class="highlight-green">outside_list:</span></span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="highlight-green">var</span>.writerow(<span class="highlight-green">item</span>)<br>
+            <span class="highlight-orange title">Databases</span><br>
+            <span class="highlight-orange">database_name</span><span class="highlight-blue">['column_name']</span> Returns info belonging to <span class="highlight-blue">column_name</span><br>
+            <span class="highlight-orange">database_name</span><span class="highlight-blue">.iloc[<span class="highlight-note">index # of row</span>]</span> :3, 3:, 3 and -3 are all valid indexes<br>
+            <span class="highlight-orange">database_name[<span class="highlight-note">'new_column_name'</span>] = <span class="highlight-note">'value'</span></span> Create new column where every input is <span class="highlight-note">value</span><br>
+            <span class="highlight-orange">database_name[<span class="highlight-note">'column'</span>] = database_name</span><span class="highlight-blue">.column.apply(str.upper)</span> Apply a functional change to every value in column<br><br>
+            <span class="highlight-green">var = <span class="highlight-orange">lambda</span> function: <span class="highlight-note">...</span></span> Single-line code that implicitly returns value</span><br>
+            <span class="highlight-orange">lambda</span> <span class="highlight-green">function: this <span class="highlight-blue">if</span> condition <span class="highlight-blue">else</span> this</span><br>
+
+        </p>
+    </div>
 </body>
 </html>

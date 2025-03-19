@@ -25,7 +25,9 @@ a:hover { color: gold ; text-decoration-line: underline ; text-underline-offset:
 
 .bubble { width: 99vw ; display: flex ; align-items: center ; transition: all 500ms ease ; padding: 10px 20px ; position: relative ; box-shadow: inset 0px 0px 5px 1px black;}
 
-.small:hover, .medium:hover, .big:hover, .giant:hover { -webkit-text-stroke: 0.2px rgba(255, 255, 255, 0.75) ; background-color: black ; letter-spacing: 1px }
+.small:hover, .medium:hover, .big:hover, .giant:hover, .massive:hover { -webkit-text-stroke: 0.2px rgba(255, 255, 255, 0.75) ; background-color: black ; letter-spacing: 1px }
+
+.massive { height: 1800px }
 
 .giant { height: 1200px }
 
@@ -78,5 +80,7 @@ a:hover { color: gold ; text-decoration-line: underline ; text-underline-offset:
 span { text-underline-offset: 2px }
 
 .fonts p { font-weight: normal }
+
+.space { letter-spacing: 2px }
 
 .w-s-f { margin: 0px 50px }
