@@ -22,7 +22,12 @@
     <div class="small green bubble">
         <p>
             <span class="title highlight-red">Arrays</span><br>
-            var reducer = <span class="highlight-red">array_name</span><span class="highlight-boo">.reduce((acc,current) => acc + current, <span class="highlight-blue">[initial]</span>)</span> Returns the sum of values in the array <span class="highlight-note">[+ optional initial value]</span>
+            var reducer = <span class="highlight-red">array_name</span><span class="highlight-boo"><span class="highlight-green">.reduce((acc,current) => acc + current, <span class="highlight-note">[initial]</span>)</span></span> Returns the sum of values in the array <span class="highlight-note">[+ optional initial value]</span><br>
+            var a = <span class="highlight-red">array_name</span><span class="highlight-green">.with(<span class="highlight-note">index,value</span>)</span> Creates a copy of array with new value at index<br>
+            var a = <span class="highlight-red">array_name</span><span class="highlight-green">.flat(<span class="highlight-note">default=1</span>)</span> Spreads nested arrys to the factor specified<br>
+            var spreader = <span class="highlight-yellow">new Set(<span class="highlight-red">[...spread,...arrays]</span>)</span> By spreading array contents into a set, duplicates are automatically rejected<br>
+            <span class="title highlight-blue">Objects</span><br>
+            const obj = <span class="highlight-yellow">Object</span>.groupBy(<span class="highlight-blue">object_name</span>, <span class="highlight-green">item => { item.name }</span>)
         </p>
     </div>
 
@@ -140,18 +145,35 @@
         </p>
     </div>
     <div class="chapter bubble">Chapter 7 - Graph Traversal</div>
-    <div class="small blue bubble">
+    <div class="medium blue bubble">
         <p>
             <span class="highlight-orange title">Breadth First Search</span><br>
             USING A <span class="highlight-orange">QUEUE</span>:<br>
             <span class="highlight-orange">i.</span> Check starting Node, add children to <span class="highlight-orange">queue</span> if not visited already.<br>
             <span class="highlight-orange">ii.</span> Shift() <span class="highlight-orange">queue</span>, check the returned value, add children to <span class="highlight-orange">queue</span> if not visited already.<br>
-            <span class="highlight-orange">iii.</span> Continue until <span class="highlight-orange">queue</span> is empty.<br><br>
+            <span class="highlight-orange">iii.</span> Continue until <span class="highlight-orange">queue</span> is empty.<br>
             <span class="highlight-blue title">Depth First Search</span><br>
             USING A <span class="highlight-blue">STACK</span>:<br>
             <span class="highlight-blue">i.</span> Check starting Node, add children to <span class="highlight-blue">stack</span> if not already visited.<br>
             <span class="highlight-blue">iia.</span> Pop() stack, if children do exist and have not been visited, add them to <span class="highlight-blue">stack</span>.<br>
             <span class="highlight-blue">iib.</span> If no children exist, pop() <span class="highlight-blue">stack</span>.<br>
+            <span class="highlight-purple title">Dijkstra's Algorithm</span><br>
+            <span class="highlight-note tiny-font">Requires edges to have positive value weighted costs</span><br>
+            <span class="highlight-purple">i.</span> Starting at source node, check for the next node with the shortest distance and move to it.<br>
+            <span class="highlight-purple">ii</span> Keep track of shortest distances, updating result as necessary and marking nodes as visited.<br>
+            <span class="highlight-purple">iii.</span> Continue until all nodes have been visited and / or the destination node was found.<br>
+            <span class="highlight-purple">iv.</span> Return the result which will be the sum of all the shortest distances.<br><br>
+            <span class="highlight-blue">PREORDER</span> nodes are added to 'visited' list <span class="highlight-blue">before</span> being placed in a stack.<br>
+            <span class="highlight-blue">POSTORDER</span> nodes are added to 'visited' list <span class="highlight-blue">after</span> being placed in a stack.<br>
+        </p>
+    </div>
+    <div class="chapter bubble">Chapter 8 - Tips and Tricks</div>
+    <div class="small teal bubble">
+        <p>
+            <span class="highlight-blue">document.querySelectorAll(<span class="highlight-note">'p.class,div#id'</span>)</span><br>
+            <span class="highlight-blue">document.designMode = 'on'</span> Enables in-window custom text editing without open editor<br>
+            <span class="highlight-blue">Math.floor(Math.random()*0xffffff).toString(16)</span> Produces a random color code<br>
+            <span class="highlight-blue">navigator.clipboard.writeText(<span class="highlight-red">e</span>)</span> Copies <span class="highlight-red">e</span> to user's clipboard<br>
         </p>
     </div>
 </body>
