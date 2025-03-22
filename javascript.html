@@ -27,7 +27,7 @@
     </div>
 
     <div class="chapter bubble">Chapter 2 - Intersection Observers</div>
-    <div class="medium teal bubble">
+    <div class="small teal bubble">
         <p>
             const <span class="highlight-orange">options</span> = { threshold: 1 , rootMargin: "0px 0px -100px 0px" };<br><br>
 
@@ -45,7 +45,7 @@
     </div>
 
     <div class="chapter bubble">Chapter 3 - Cookies & Process Environments</div>
-    <div class="small blue bubble">
+    <div class="tiny blue bubble">
         <p>
             document.cookie = "(key)=(value) ; <span class="highlight-blue">expires=(date)</span> ; path=(/path/here)"<br><br>
             <span class="highlight-note">// Cookies do not have a delete function but can have the expiration updated to an already passed date for an instakill</span><br><br>
@@ -56,7 +56,7 @@
     </div>
 
     <div class="chapter bubble">Chapter 4 - Infinite Scrolling</div>
-    <div class="medium purple bubble">
+    <div class="small purple bubble">
         <p>
             const <span class="highlight-green">url</span> = 'path/to/be/manipulated/'; <span class="highlight-note">// This path must produce an image whenever a number is attached to the end of it</span><br>
             const <span class="highlight-green">container</span> = document.querySelector('.container');<br><br>
@@ -68,12 +68,12 @@
                     <span class="highlight-green">img</span>.src = `${<span class="highlight-green">url</span>}${<span class="highlight-purple">getRandomNumber()</span>}`;<br>
                     <span class="highlight-green">container</span>.appendChild(<span class="highlight-green">img</span>); <span class="highlight-green">i++</span> }<br>
                     <span class="highlight-purple">}</span><br><br>
-            window.addEventListener('scroll', () => { if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) { <span class="highlight-purple">loadImages()</span> } })<br><br>
+            window.addEventListener('scroll', () => { if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) { <span class="highlight-purple">loadImages()</span> } })<br>
         </p>
     </div>
 
     <div class="chapter bubble">Chapter 5 - Maps and Sets</div>
-    <div class="giant orange bubble">
+    <div class="big orange bubble">
         <p>
             <span class="highlight-green title">Maps</span><br>
             const <span class="highlight-green">myMap</span> = <span class="highlight-red">new</span> <span class="highlight-green">Map()</span> Initialize new map object that only accepts key-value pairs<br>
@@ -121,7 +121,7 @@
     </div>
 
     <div class="chapter bubble">Chapter 6 - Event Listeners</div>
-    <div class="big grey bubble">
+    <div class="medium grey bubble">
         <p>
             document.addEventListener("click", <span class="highlight-green">e</span> => {<br>
                 if (<span class="highlight-green">e</span>.target.matches("div") { <span class="highlight-note"> ... </span> })<br>
@@ -140,7 +140,7 @@
         </p>
     </div>
     <div class="chapter bubble">Chapter 7 - Graph Traversal</div>
-    <div class="medium blue bubble">
+    <div class="small blue bubble">
         <p>
             <span class="highlight-orange title">Breadth First Search</span><br>
             USING A <span class="highlight-orange">QUEUE</span>:<br>
@@ -151,7 +151,7 @@
             USING A <span class="highlight-blue">STACK</span>:<br>
             <span class="highlight-blue">i.</span> Check starting Node, add children to <span class="highlight-blue">stack</span> if not already visited.<br>
             <span class="highlight-blue">iia.</span> Pop() stack, if children do exist and have not been visited, add them to <span class="highlight-blue">stack</span>.<br>
-            <span class="highlight-blue">iib.</span> If no children exist, pop() <span class="highlight-blue">stack</span>.<br><br>
+            <span class="highlight-blue">iib.</span> If no children exist, pop() <span class="highlight-blue">stack</span>.<br>
         </p>
     </div>
 </body>

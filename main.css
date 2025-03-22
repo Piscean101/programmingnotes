@@ -1,5 +1,5 @@
 body { margin: 0 ; cursor: none ; line-height: 1.5 ; width: 90vw ; overflow-x: hidden }
-p { font-weight: bold ; padding: 10px ; font-family: consolas ; font-size: 17px }
+p { font-weight: bold ; padding: 10px ; font-family: system-ui ; font-size: 14px }
 .block { font-weight: bold ; font-family: Calibri ; background-color: rgba(100, 100, 100,0.25) ; padding: 15px ; border-radius: 15px ; font-size: 12px ; display: inline-block }
 
 .navigation {
@@ -25,17 +25,21 @@ a:hover { color: gold ; text-decoration-line: underline ; text-underline-offset:
 
 .bubble { width: 99vw ; display: flex ; align-items: center ; transition: all 500ms ease ; padding: 10px 20px ; position: relative ; box-shadow: inset 0px 0px 5px 1px black;}
 
-.small:hover, .medium:hover, .big:hover, .giant:hover, .massive:hover { -webkit-text-stroke: 0.2px rgba(255, 255, 255, 0.75) ; background-color: black ; letter-spacing: 1px }
+/* Sizing of the various blocks */
 
-.massive { height: 1800px }
+.tiny:hover, .small:hover, .medium:hover, .big:hover, .giant:hover, .massive:hover { -webkit-text-stroke: 0.2px rgba(255, 255, 255, 0.75) ; background-color: black ; letter-spacing: 1px }
 
-.giant { height: 1200px }
+.massive { height: 2000px }
 
-.big { height: 900px }
+.giant { height: 1500px }
 
-.medium { height: 500px }
+.big { height: 1000px }
 
-.small { height: 300px }
+.medium { height: 700px }
+
+.small { height: 400px }
+
+.tiny { height: 200px }
 
 .chapter { height: 50px ; background-color: white ; letter-spacing: 4px ; font-family: Impact ; display: flex ; justify-content: center ; align-items: center }
 
@@ -71,7 +75,7 @@ a:hover { color: gold ; text-decoration-line: underline ; text-underline-offset:
 
 .highlight-orange { color: rgb(137, 89, 0) }
 
-.highlight-note { color: rgba(100, 100, 100,0.7) }
+.highlight-note { color: rgba(100, 100, 100,0.7) ; font-style: italic ;}
 
 .highlight-green { color: green }
 
@@ -79,8 +83,26 @@ a:hover { color: gold ; text-decoration-line: underline ; text-underline-offset:
 
 span { text-underline-offset: 2px }
 
-.fonts p { font-weight: normal }
+.fonts p { font-weight: normal ; font-size: 120% }
 
 .space { letter-spacing: 2px }
 
 .w-s-f { margin: 0px 50px }
+
+.tiny-font { font-size: 85% ; font-family: system-ui }
+
+.infobar {
+    width: 99vw; 
+    /* border: 2px solid red;  */
+    position: absolute; 
+    display: flex; 
+    justify-content: space-evenly; 
+    left: 0; 
+    margin: 10px 0px;
+    box-shadow: black 0px 0px 8px 8px;
+    background-color: black }
+
+.instructions {
+    position: relative;
+    left: 16px;
+    opacity: 0.7 }

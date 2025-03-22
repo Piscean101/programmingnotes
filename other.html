@@ -69,11 +69,15 @@
 
 
     <div class="chapter bubble">Chapter 3 - Typescript</div>
-    <div class="small blue bubble"></div>
+    <div class="small blue bubble">
+        <p>
+            <span class="highlight-blue">function name()<span class="highlight-orange">: string</span>{}</span> Throws err if function returns any value type except <span class="highlight-orange">string</span> including no value at all<br>
+        </p>
+    </div>
 
 
     <div class="chapter bubble">Chapter 4 - Regular Expressions</div>
-    <div class="medium pink bubble">
+    <div class="small pink bubble">
         <p>
             let <span class="highlight-green">regex</span> = <span class="highlight-red">new</span> <span class="highlight-green">RegExp(<span class="highlight-note">"expression"</span>)</span>;
             <span class="highlight-note">// second optional arguments:
@@ -97,7 +101,7 @@
         </p>
     </div>
     <div class="chapter bubble">Chapter 5 - MongoDB</div>
-    <div class="medium yellow bubble">
+    <div class="small yellow bubble">
         <p>
             <span class="highlight-green">use</span> <span class="highlight-note">database_name</span> Navigate to a database<br>
             <span class="highlight-red">.count()</span><br>
@@ -119,7 +123,7 @@
         </p>
     </div>
     <div class="chapter bubble">Chapter 6 - PHP</div>
-    <div class="massive red bubble">
+    <div class="giant red bubble">
         <p>
         <span class="highlight-red title">In the Terminal</span><br>
         <span class="highlight-blue">php src/index.php</span><br>
@@ -179,7 +183,7 @@
         </p>
     </div>
     <div class="chapter bubble">Chapter 7 - Swift (IOS)</div>
-    <div class="medium teal bubble">
+    <div class="small teal bubble">
         <p>
             <span class="highlight-note">file_name.swift</span><br><br>
             <span class="highlight-red title">DATA TYPES and VARIABLES</span><br>
@@ -192,6 +196,52 @@
             <span class="highlight-green">var <span class="highlight-note">keyword</span>:<span class="highlight-orange">Int</span> = value</span> Return false unless input is of type <span class="highlight-orange">Int</span><br>
             <span class="highlight-red title">STRING INTERPOLATION</span><br>
             <span class="highlight-red">print(<span class="highlight-note">"This is \(<span class="highlight-green">keyword</span>) interpolation in Swift"</span>)</span>
+        </p>
+    </div>
+    <div class="chapter bubble">Chapter 8 - Page Building Essentials</div>
+    <div class="big blue bubble">
+        <p>
+            <span class="title highlight-green">HERO SECTION</span><br>
+            <span class="highlight-note tiny-font">Being the very first thing users see when they visit our homepage, an excellent Hero section must include 4 things:</span><br>
+            <span class="highlight-green">1. Proposition <span class="highlight-note tiny-font">should be short and sweet. Detailing what we do and why the customer should care.</span><br>
+            <span class="highlight-green">2. Call To Action</span> <span class="highlight-note tiny-font">is the most eye-catching element on the page. What action is this page trying to encourage users to do?</span><br>
+            <span class="highlight-green">3. Emotional Response</span> <span class="highlight-note tiny-font">demonstrates our deeper understanding of our clients' goals</span><br>
+            <span class="highlight-green">4. Social Proof</span> <span class="highlight-note tiny-font">social media outreach and testimonials foster familiarity and community</span><br>
+            <span class="title highlight-yellow">Search Engine Optimization</span><br>
+            <span class="highlight-note tiny-font">Keywords include all products and services associated with our clients. SEO includes the process of placing these words within at least these 7 areas:</span><br><br>
+            <span class="highlight-yellow infobar title"> <span>Page Title</span> <span>File Name</span> <span>Headings</span> <span>Text</span> <span>Links</span> <span>"alt" tags</span> <span>&lt;head&gt; and &lt;meta&gt; tags</span></span><br><br><br><br>
+            <span class="highlight-yellow"><u>IDENTIFYING KEYWORDS</u></span><br>
+            <span class="highlight-yellow">Brainstorm <span class="highlight-note">-></span> Organize <span class="highlight-note">-></span> Compare Against Competitors <span class="highlight-note">-></span> Refine <span class="highlight-note">-></span> Wireframe</span>
+        </p>
+    </div>
+    <div class="chapter bubble">Chapter 9 - Hosting Websites</div>
+    <div class="medium green bubble">
+        <p>
+            Download <span class="highlight-green">XAAMP</span> from <span class="highlight-orange">apachefriends.org</span> <span class="highlight-note">*long download</span><br>
+            Download <span class="highlight-green">Wordpress</span> from <span class="highlight-orange">wordpress.org</span> <span class="highlight-note">*must install zip-utility to access files</span><br>
+            Download <span class="highlight-green">packetriot</span> from <span class="highlight-orange">packetriot.com</span><br>
+            <span class="instructions">
+                i. unzip folder -> open pkriot file<br>
+                ii. copy path of pkriot-0.11.0 etc.<br>
+                iii. search "environmental variables" in computer system<br>
+                iv. control panel -> add new path<br>
+                v. from TERMINAL -> <span class="highlight-blue">pktriot.exe configure</span> <span class="highlight-note">input selection: 1</span><br><br>
+            </span>
+            From <span class="highlight-green">XAAMP -></span> START &nbsp;<span class="highlight-blue">Apache &nbsp; MySQL</span><br>
+            Go to localhost/dashboard<br>
+            Copy all unzipped <span class="highlight-green">Wordpress -> XAAMP/htdocs -> New Folder(<span class="highlight-note">'wordpress'</span>)</span><br>
+            Go to localhost/wordpress<br>
+            From <span class="highlight-green">Wordpress</span> admin tab <span class="highlight-blue">'plugins'</span> install and activate <span class="highlight-green">'Remove HTTP'</span><br><br>
+    
+            From TERMINAL -> <span class="highlight-blue">pktriot.exe tunnel http add --domain</span> (<span class="highlight-orange">hostname</span>)<br>
+            <span class="highlight-blue">--destination localhost --http</span> (apache server PORT)<br>
+            <span class="highlight-blue">--letsencrypt</span><br><br>
+
+            From File Manager -> Open <span class="highlight-note">XAAMP/htdocs/wordpress/wp-config</span><br>
+            Find section that says <span class="highlight-note">"add any values between this and stop editing"</span><br>
+            Add 2 lines: <br> 
+            <span class="highlight-note">define('WP_HOME','http://<span class="highlight-orange">hostname</span>/wordpress')</span><br>
+            <span class="highlight-note">define('WP_SITEURL','http://<span class="highlight-orange">hostname</span>/wordpress')</span><br>
         </p>
     </div>
 </body>
