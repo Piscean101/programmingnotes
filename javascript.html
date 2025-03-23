@@ -18,8 +18,8 @@
         <a href="other.html"><p>OTHER</p></a>
     </div>
 
-    <div class="chapter bubble">Chapter 1 - Arrays and Objects</div>
-    <div class="small green bubble">
+    <div class="chapter bubble">Arrays and Objects</div>
+    <div class="small blue bubble">
         <p>
             <span class="title highlight-red">Arrays</span><br>
             var reducer = <span class="highlight-red">array_name</span><span class="highlight-boo"><span class="highlight-green">.reduce((acc,current) => acc + current, <span class="highlight-note">[initial]</span>)</span></span> Returns the sum of values in the array <span class="highlight-note">[+ optional initial value]</span><br>
@@ -31,8 +31,8 @@
         </p>
     </div>
 
-    <div class="chapter bubble">Chapter 2 - Intersection Observers</div>
-    <div class="small teal bubble">
+    <div class="chapter bubble">Intersection Observers</div>
+    <div class="small purple bubble">
         <p>
             const <span class="highlight-orange">options</span> = { threshold: 1 , rootMargin: "0px 0px -100px 0px" };<br><br>
 
@@ -49,8 +49,8 @@
         </p>
     </div>
 
-    <div class="chapter bubble">Chapter 3 - Cookies & Process Environments</div>
-    <div class="tiny blue bubble">
+    <div class="chapter bubble">Cookies & Process Environments</div>
+    <div class="tiny brown bubble">
         <p>
             document.cookie = "(key)=(value) ; <span class="highlight-blue">expires=(date)</span> ; path=(/path/here)"<br><br>
             <span class="highlight-note">// Cookies do not have a delete function but can have the expiration updated to an already passed date for an instakill</span><br><br>
@@ -60,8 +60,8 @@
        </p>
     </div>
 
-    <div class="chapter bubble">Chapter 4 - Infinite Scrolling</div>
-    <div class="small purple bubble">
+    <div class="chapter bubble">Infinite Scrolling</div>
+    <div class="small red bubble">
         <p>
             const <span class="highlight-green">url</span> = 'path/to/be/manipulated/'; <span class="highlight-note">// This path must produce an image whenever a number is attached to the end of it</span><br>
             const <span class="highlight-green">container</span> = document.querySelector('.container');<br><br>
@@ -77,8 +77,8 @@
         </p>
     </div>
 
-    <div class="chapter bubble">Chapter 5 - Maps and Sets</div>
-    <div class="big orange bubble">
+    <div class="chapter bubble">Maps and Sets</div>
+    <div class="big pink bubble">
         <p>
             <span class="highlight-green title">Maps</span><br>
             const <span class="highlight-green">myMap</span> = <span class="highlight-red">new</span> <span class="highlight-green">Map()</span> Initialize new map object that only accepts key-value pairs<br>
@@ -125,8 +125,8 @@
         </p>
     </div>
 
-    <div class="chapter bubble">Chapter 6 - Event Listeners</div>
-    <div class="medium grey bubble">
+    <div class="chapter bubble">Event Listeners</div>
+    <div class="medium orange bubble">
         <p>
             document.addEventListener("click", <span class="highlight-green">e</span> => {<br>
                 if (<span class="highlight-green">e</span>.target.matches("div") { <span class="highlight-note"> ... </span> })<br>
@@ -144,8 +144,8 @@
                         <span class="highlight-red">lastScroll</span> = <span class="highlight-green">currentScroll</span> });<br>
         </p>
     </div>
-    <div class="chapter bubble">Chapter 7 - Graph Traversal</div>
-    <div class="medium blue bubble">
+    <div class="chapter bubble">Graph Traversal</div>
+    <div class="medium yellow bubble">
         <p>
             <span class="highlight-orange title">Breadth First Search</span><br>
             USING A <span class="highlight-orange">QUEUE</span>:<br>
@@ -167,13 +167,36 @@
             <span class="highlight-blue">POSTORDER</span> nodes are added to 'visited' list <span class="highlight-blue">after</span> being placed in a stack.<br>
         </p>
     </div>
-    <div class="chapter bubble">Chapter 8 - Tips and Tricks</div>
-    <div class="small teal bubble">
+    <div class="chapter bubble">Uncommon Functions</div>
+    <div class="small green bubble">
         <p>
             <span class="highlight-blue">document.querySelectorAll(<span class="highlight-note">'p.class,div#id'</span>)</span><br>
             <span class="highlight-blue">document.designMode = 'on'</span> Enables in-window custom text editing without open editor<br>
             <span class="highlight-blue">Math.floor(Math.random()*0xffffff).toString(16)</span> Produces a random color code<br>
             <span class="highlight-blue">navigator.clipboard.writeText(<span class="highlight-red">e</span>)</span> Copies <span class="highlight-red">e</span> to user's clipboard<br>
+        </p>
+    </div>
+    <div class="chapter bubble">Searching</div>
+    <div class="medium teal bubble">
+        <p>
+            <span class="highlight-green title">Binary Search</span><br>
+            <span class="highlight-note tiny-font">Requires a sorted data set</span><br>
+            let <span class="highlight-green">left_index</span> = 0;<br>
+            let <span class="highlight-green">right_index</span> = 0;<br><br>
+            while (<span class="highlight-green">right_index</span> > <span class="highlight-green">left_index</span>) {<br>
+                const <span class="highlight-green">checkpoint</span> = Math.floor((<span class="highlight-green">left_index</span> + <span class="highlight-green">right_index</span> / 2));<br>
+                const <span class="highlight-green">checking</span> = <span class="highlight-purple">data_name[<span class="highlight-green">checkpoint</span>];</span><br>
+                if (<span class="highlight-green">checking</span> === <span class="highlight-purple">target_value</span>) { return <span class="highlight-green">checkpoint</span> }<br>
+                else if (<span class="highlight-green">checking</span> < <span class="highlight-purple">target_value</span>) { <span class="highlight-green">left_index</span> = <span class="highlight-green">checkpoint</span> + 1 }<br>
+                else { <span class="highlight-green">right_index</span> = <span class="highlight-green">checkpoint</span> }<br>
+            }<br>
+            <span class="highlight-orange title">Recursive Algorithm</span><br>
+            <span class="highlight-orange">findNode(<span class="highlight-note">data</span>){<br>
+                let <span class="highlight-green">current</span> = <span class="highlight-blue">this</span>.head;<br>
+                while (<span class="highlight-green">current</span>) {<br>
+                    if (<span class="highlight-note">check for match</span>) { return <span class="highlight-green">current</span> };<br>
+                    <span class="highlight-green">current</span> = <span class="highlight-green">current</span>.next }
+                    return null };</span><br>
         </p>
     </div>
 </body>

@@ -16,7 +16,7 @@ p { font-weight: bold ; padding: 10px ; font-family: system-ui ; font-size: 14px
 .navigation a {
     font-weight: bold;
     letter-spacing: 2px;
-    padding: 0px 50px;
+    padding: 0px 4.5%;
     transition: all 500ms ease;
     color: #f7f7f7;
     text-decoration: none }
