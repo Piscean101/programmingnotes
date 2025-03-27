@@ -244,5 +244,67 @@
             <span class="highlight-note">define('WP_SITEURL','http://<span class="highlight-orange">hostname</span>/wordpress')</span><br>
         </p>
     </div>
+    <div class="chapter bubble">SQL</div>
+    <div class="medium blue bubble">
+        <p>
+            <span class="highlight-purple">DEFAULT</span> <span class="highlight-note">(value)</span> Used in conjunction with <span class="highlight-purple">CREATE TABLE</span><br>
+            <span class="highlight-purple">CHECK</span> <span class="highlight-note">(condition)</span> Creates an anonymous constraint<br>
+            <span class="highlight-purple">CONSTRAINT</span> <span class="highlight-note">(name)</span> <span class="highlight-purple">CHECK</span> <span class="highlight-note">(condition)</span> Named constraint for easier referencing later<br>
+            <span class="highlight-purple">ALTER TABLE <span class="highlight-note">(table_name)</span> RENAME COLUMN <span class="highlight-note">(old_column_name)</span> TO <span class="highlight-note">(new_column_name)</span></span><br>
+            <span class="highlight-purple">DEFAULT</span> <span class="highlight-note">(value)</span> Used in conjunction with <span class="highlight-purple">CREATE TABLE</span> <span>(column_name)</span><br>
+            <span class="highlight-purple">ORDER BY</span> <span class="highlight-note">(column_name)</span><br>
+            <span class="highlight-purple">OFFSET</span> <span class="highlight-note">(#)</span> 
+            <span class="highlight-purple">LIMIT</span> <span class="highlight-note">(#)</span> Exclude returning results from the start or end of the data set respectively<br><br>
+            
+            <span class="highlight-note">ie.<br>
+            SELECT e.employee_id, e.department_id, d.location <br>
+            FROM employees e JOIN departments d<br>
+            ON (e.department_id = d.department_id)</span><br><br>
+
+            <span class="highlight-note">cd c:\Program Files\PostgreSQL\13\data => "postgresl.conf" => returns table analytics</span>
+        </p>
+    </div>
+    <div class="chapter bubble">GitHub</div>
+    <div class="big purple bubble">
+        <p>
+            <span class="highlight-orange title">SETUP</span><br>
+            <span class="highlight-orange">git config <span class="highlight-note">--global</span> user.name <span class="highlight-note">"[firstname lastname]"</span></span> Set a custom identifiable credit<br>
+            <span class="highlight-orange">git config <span class="highlight-note">--global</span> user.email <span class="highlight-note">"[valid-email]"</span></span> Set email to be associated with each history marker<br>
+            <span class="highlight-orange">git config <span class="highlight-note">--global</span> color.ui auto</span> Set automatic command-line coloring for Git<br>
+            <span class="highlight-orange">git init </span><br>
+            <span class="highlight-orange">git clone <span class="highlight-note">[url]</span> </span><br>
+            <span class="highlight-red title">STAGE</span><br>
+            <span class="highlight-red">git status</span><br>
+            <span class="highlight-red">git add</span> <span class="highlight-note">-f [file]</span> [-f] only to force commit despite gitignore<br>
+            <span class="highlight-red">git rm</span> <span class="highlight-note">--cached [file]</span> [--cached] only to remove forced files<br>
+            <span class="highlight-red">git mv</span> <span class="highlight-note">[existing_path] [new_path]</span> Change file path and stage changes<br>
+            <span class="highlight-red">git reset <span class="highlight-note">[file]</span></span> Unstage a file while retaining the changes in the working directory<br>
+            <span class="highlight-red">git diff</span> Analytics of what is changed but not staged<br>
+            <span class="highlight-red">git commit <span class="highlight-note">-m "[descriptive message]"</span></span><br>
+            <span class="highlight-red"><u>Temporary Commits</u></span><br>
+            <span class="highlight-red">git stash</span> Temporarily save modified changes to a stash stack to allow branch switching<br>
+            <span class="highlight-red">git stash list</span> Stack-order list of stashed stages<br>
+            <span class="highlight-red">git stash pop</span> Write working from top of stash stack<br>
+            <span class="highlight-red">git stash drop</span> Discard changes from the top of stash stack<br>
+            <span class="highlight-purple title">BRANCH</span><br>
+            <span class="highlight-purple">git branch</span> List of branches<br>
+            <span class="highlight-purple">git branch <span class="highlight-note">"[branch_name]"</span></span> Create a new branch<br>
+            <span class="highlight-purple">git checkout</span> Switch to another branch and check it out into your working directory<br>
+            <span class="highlight-purple">git merge <span class="highlight-note">[branch]</span></span> Merge specified branch into current one<br>
+            <span class="highlight-blue title">INSPECT</span><br>
+            <span class="highlight-blue">git log</span><br>
+            <span class="highlight-blue">git log <span class="highlight-note">branchA..branchB</span></span> Shows commits on branchA not found on branchB<br>
+            <span class="highlight-blue">git diff <span class="highlight-note">branchA..branchB</span></span> Shows diff of branchA and branchB contents<br>
+            <span class="highlight-blue">git show <span class="highlight-note">[SHA]</span></span> Show git object in human-readable format<br>
+            <span class="highlight-green title">SHARE</span><br>
+            <span class="highlight-green">git remote add</span> <span class="highlight-note">[alias] [url]</span><br>
+            <span class="highlight-green">git fetch</span> <span class="highlight-note">[alias]</span><br>
+            <span class="highlight-green">git push</span> <span class="highlight-note">[alias] [branch]</span> Push local commits to remote branch<br>
+            <span class="highlight-green">git pull</span> Fetch and merge any commits from the tracking remote branch<br>
+            <span class="highlight-yellow title">REWRITE</span><br>
+            <span class="highlight-yellow">git rebase <span class="highlight-note">[branch]</span></span> Apply current branch before specific one<br>
+            <span class="highlight-yellow">git reset <span class="highlight-note">--hard [commit]</span></span> Clear stage area, rewrite working tree from specified commit<br>
+        </p>
+    </div>
 </body>
 </html>
