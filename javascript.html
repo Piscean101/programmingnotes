@@ -127,11 +127,22 @@
     </div>
 
     <div class="chapter bubble">Event Listeners</div>
-    <div class="medium orange bubble">
+    <div class="big orange bubble">
         <p>
             document.addEventListener("click", <span class="highlight-green">e</span> => {<br>
                 if (<span class="highlight-green">e</span>.target.matches("div") { <span class="highlight-note"> ... </span> })<br>
             }); <span class="highlight-note"> // Delegate all event listeners to the desired outermost body or document</span><br><br>
+            <span class="highlight-red title">Listener List</span><br>
+            <span class="highlight-red"><u>Click Events</u></span><br>
+            click - dblclick - mousedown - mouseup - contextmenu - mouseout - mousewheel - mouseover<br>
+            <span class="highlight-red"><u>Touch Events</u></span><br>
+            touchstart - touchend - touchmove - touchcancel<br>
+            <span class="highlight-red"><u>Keyboard Events</u></span><br>
+            keydown - keyup - keypress<br>
+            <span class="highlight-red"><u>Form Events</u></span><br>
+            focus - blur - change - submit<br>
+            <span class="highlight-red"><u>Window Events</u></span><br>
+            resize - scroll - load - unload - hashchange<br>
             <span class="highlight-green title">Disappearing Navbar</span><br><br>
             const <span class="highlight-red">body</span> = document.body;<br>
             let <span class="highlight-red">lastScroll</span> = 0;<br><br>

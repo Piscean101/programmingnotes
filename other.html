@@ -272,14 +272,18 @@
     <div class="chapter bubble">SQL</div>
     <div class="medium blue bubble">
         <p>
-            <span class="highlight-purple">DEFAULT</span> <span class="highlight-note">(value)</span> Used in conjunction with <span class="highlight-purple">CREATE TABLE</span><br>
-            <span class="highlight-purple">CHECK</span> <span class="highlight-note">(condition)</span> Creates an anonymous constraint<br>
-            <span class="highlight-purple">CONSTRAINT</span> <span class="highlight-note">(name)</span> <span class="highlight-purple">CHECK</span> <span class="highlight-note">(condition)</span> Named constraint for easier referencing later<br>
-            <span class="highlight-purple">ALTER TABLE <span class="highlight-note">(table_name)</span> RENAME COLUMN <span class="highlight-note">(old_column_name)</span> TO <span class="highlight-note">(new_column_name)</span></span><br>
-            <span class="highlight-purple">DEFAULT</span> <span class="highlight-note">(value)</span> Used in conjunction with <span class="highlight-purple">CREATE TABLE</span> <span>(column_name)</span><br>
-            <span class="highlight-purple">ORDER BY</span> <span class="highlight-note">(column_name)</span><br>
-            <span class="highlight-purple">OFFSET</span> <span class="highlight-note">(#)</span> 
-            <span class="highlight-purple">LIMIT</span> <span class="highlight-note">(#)</span> Exclude returning results from the start or end of the data set respectively<br><br>
+            <span class="highlight-purple">DEFAULT</span> <span class="highlight-note">[value]</span> Used in conjunction with <span class="highlight-purple">CREATE TABLE</span><br>
+            <span class="highlight-purple">CHECK</span> <span class="highlight-note">[condition]</span> Creates an anonymous constraint<br>
+            <span class="highlight-purple">CONSTRAINT</span> <span class="highlight-note">[name]</span> <span class="highlight-purple">CHECK</span> <span class="highlight-note">[condition]</span> Named constraint for easier referencing later<br>
+            <span class="highlight-purple">CREATE TABLE <span class="highlight-blue">table_name (<span class="highlight-note">column_name data_type,column_name data_type</span>)</span></span><br>
+            <span class="highlight-purple">ALTER TABLE <span class="highlight-note">[table_name]</span> RENAME COLUMN <span class="highlight-note">[outdated_column_name]</span> TO <span class="highlight-note">'Name For New Column'</span></span><br>
+            <span class="highlight-purple">UPDATE TABLE <span class="highlight-note">[table_name]</span> SET <span class="highlight-note">[column_name]</span> = <span class="highlight-note">[new_column_name]</span></span><br>
+            <span class="highlight-purple">INSERT INTO <span class="highlight-note">[table_name]</span> <span class="highlight-blue">(<span class="highlight-note">column_name,column_name</span>) VALUES (<span class="highlight-note">value,value</span>)</span></span><br>
+            <span class="highlight-purple">DELETE FROM <span class="highlight-note">[table_name]</span> WHERE ID = <span class="highlight-note">[value]</span></span><br>
+            <span class="highlight-purple">DEFAULT</span> <span class="highlight-note">[value]</span> Used in conjunction with <span class="highlight-purple">CREATE TABLE</span><br>
+            <span class="highlight-purple">ORDER BY</span> <span class="highlight-note">[column_name]</span><br>
+            <span class="highlight-purple">OFFSET</span> <span class="highlight-note">[#]</span> 
+            <span class="highlight-purple">LIMIT</span> <span class="highlight-note">[#]</span> Exclude returning results from the start or end of the data set respectively<br><br>
             
             <span class="highlight-note">ie.<br>
             SELECT e.employee_id, e.department_id, d.location <br>
