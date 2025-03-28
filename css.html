@@ -19,13 +19,18 @@
     </div>
 
     <div class="chapter bubble">Fonts</div>
-    <div class="tiny blue bubble fonts">
+    <div class="small blue bubble fonts">
         <p class="w-s-f">Web-Safe Fonts</p>
         <!-- <p><span class="highlight-orange">PERFORMANCE:</span> <br><span style="font-family:verdana">VERDANA</span></p> -->
-        <p><span class="highlight-orange">CONSERVATIVE:</span> <br><span style="font-family:arial">ARIAL</span>&nbsp; <span style="font-family:Times New Roman">TIMES NEW ROMAN</span></p>
-        <p><span class="highlight-orange">INTERESTING:</span> <br><span style="font-family:cursive">CURSIVE</span>&nbsp; <span style="font-family:courier new">COURIER NEW</span></p>
+        <p><span class="highlight-orange">CONSERVATIVE:</span> <br><span style="font-family:arial">ARIAL</span> <br><span style="font-family:Times New Roman">TIMES NEW ROMAN</span></p>
+        <p><span class="highlight-orange">INTERESTING:</span> <br><span style="font-family:cursive">CURSIVE</span><br> <span style="font-family:courier new">COURIER NEW</span></p>
         <p><span class="highlight-orange">HEADINGS:</span> <br><span style="font-family:franklin gothic">FRANKLIN GOTHIC</span>&nbsp; <span style="font-family:impact;">IMPACT</span></p>
         <p><span class="highlight-orange">CONTENT:</span> <br><span style="font-family:calibri">CALIBRI</span>&nbsp; <span style="font-family:consolas">CONSOLAS</span>&nbsp; <span style="font-family:system-ui">SYSTEM UI</span></p>
+        <p><span class="highlight-orange">@font-face {<br>
+            font-family: '<span class="highlight-purple">fontName</span>';<br>
+            src: <span class="highlight-blue">url(<span class="highlight-note">'path/to/fontsite'</span>)</span> }</span><br><br>
+        h1, h2 { font-family: <span class="highlight-purple">fontName</span> }
+    </p>
     </div>
 
     <div class="chapter bubble">Uncommon Rules & Properties</div>
@@ -41,6 +46,7 @@
             <span class="highlight-blue">-webkit-text-fill-color:</span> <span class="highlight-yellow">transparent</span> Pair with a gradient background<br>
             <span class="highlight-green">:root { <span class="highlight-blue">--color-name: <span class="highlight-note">rgba</span></span> }; </span><span class="highlight-green">#element { <span class="highlight-blue">color: var(--clr-name)</span> }</span> Declare a universal variable and access it within another rule's properties<br>
             <span class="highlight-green">:root</span><span class="highlight-blue">:has(<span class="highlight-yellow">#element: checked</span>) {<span class="highlight-note">...</span>}</span> Control entire page themes from a single endpoint<br>
+            <span class="highlight-green">width:</span><span class="highlight-blue"> clamp(<span class="highlight-yellow">minpx, preferred%, maxpx</span>) </span><br>
             <span class="highlight-blue">filter:</span> 
             <span class="highlight-yellow">grayscale(<i class="highlight-note">%</i>)</span> 
             <span class="highlight-yellow">contrast(<i class="highlight-note">%</i>)</span> 
@@ -76,6 +82,24 @@
                 <span class="highlight-red">overscroll-behavior-inline:</span> contain;<br>
                 <span class="highlight-red">scroll-snap-type:</span> inline mandatory;<br><br>
                 <span class="highlight-green">.child { <span class="highlight-red">scroll-snap-align:</span> start }</span><br>
+            </span>
+            <span class="block">
+                <span class="title highlight-purple">Keyframe</span><br>
+                <span class="highlight-purple">keyframe <span class="highlight-red">fadeIn</span> {<br>
+                    from { <span class="highlight-note">opacity: 0 </span> }<br>
+                    to { <span class="highlight-note">opacity: 1 </span> }<br>
+                }</span><br><br>
+                <span class="highlight-purple">animation:</span> <span class="highlight-red">fadeIn</span> linear 500ms<br>
+            </span>
+            <span class="block">
+                <span class="title highlight-blue">Browser-Compatibility</span><br>
+                <span class="highlight-blue">.browser-comp {<br>
+                    -webkit-transition: ... <span class="highlight-note">/ chrome /</span><br>
+                    -moz-transition: ... <span class="highlight-note">/ firefox /</span><br>
+                    -ms-transition: ... <span class="highlight-note">/ internet explorer /</span><br>
+                    -o-transition: ... <span class="highlight-note">/ opera /</span><br>
+                    transition: ... <br>
+                    }</span>
             </span>
         </p>
     </div>
