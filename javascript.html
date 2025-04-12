@@ -211,5 +211,20 @@
                     return null };</span><br>
         </p>
     </div>
+    <div class="chapter bubble">OAuth</div>
+    <div class="big grey bubble">
+        <p>
+            >> npm install <span class="highlight-blue">oauth2-server;</span><br><br>
+            const <span class="highlight-green">OAUTH</span> = <span class="highlight-orange">require(<span class="highlight-blue">oauth2-server</span>)</span><br><br>
+            const <span class="highlight-green">oa</span> = new <span class="highlight-green">OAUTH(<span class="highlight-blue">{<br>
+                model: <span class="highlight-orange">require(<span class="highlight-note">'./path.js'</span>)</span>,<br>
+                allowBearerTokensInQueryString: <span class="highlight-purple">true</span>,<br>
+                accessTokenLifetime: <span class="highlight-purple">60</span> * <span class="highlight-purple">60</span> <span class="highlight-note">// 1 hour //</span>
+            }</span>)</span><br><br>
+            module.exports = {<br>
+                confidentialClients: [{clientId: _, clientSecret: _, grants: []}]
+            }
+        </p>
+    </div>
 </body>
 </html>
