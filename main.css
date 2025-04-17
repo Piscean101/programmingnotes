@@ -1,5 +1,7 @@
 body { margin: 0 ; cursor: none ; line-height: 1.5 ; width: 90vw ; overflow-x: hidden }
-p { font-weight: bold ; padding: 10px ; font-family: system-ui ; font-size: 14px }
+p, table { font-weight: bold ; padding: 10px ; font-family: system-ui ; font-size: 14px }
+table, td { border: 2px solid black; border-collapse: collapse; padding: 5px 10px }
+.tab { background-color: black; color: rgb(147, 147, 0) }
 .block { font-weight: bold ; font-family: Calibri ; background-color: rgba(100, 100, 100,0.25) ; padding: 15px ; border-radius: 15px ; font-size: 12px ; display: inline-block }
 
 .navigation {
@@ -99,7 +101,7 @@ span { text-underline-offset: 2px }
     justify-content: space-evenly; 
     left: 0; 
     margin: 10px 0px;
-    box-shadow: black 0px 0px 8px 8px;
+    box-shadow: black 0px 0px 5px 5px;
     background-color: black }
 
 .instructions {

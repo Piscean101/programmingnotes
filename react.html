@@ -32,6 +32,8 @@
     <div class="chapter bubble">Initialization</div>
     <div class="small purple bubble">
         <p>
+            <span class="highlight-blue">npx create-react-app .</span> (.) indicates to create app in current folder<br>
+            <span class="highlight-blue">npm start</span><br>
             <span class="highlight-note">&lt;script src="https://unpkg.com/react@16/umd/react.production.min.js"&gt;</span><br><br>
             import {<span class="highlight-blue">React</span>} from 'react';<br>
             import {<span class="highlight-blue">createRoot, reactDOM</span>} from 'react-dom/client';<br><br>
@@ -42,12 +44,33 @@
     </div>
 
 
-    <div class="chapter bubble">Chapter 3</div>
-    <div class="tiny brown bubble"></div>
+    <div class="chapter bubble">State & Event Handlers</div>
+    <div class="tiny brown bubble">
+        <p>
+            function Store(props) {<br>
+                const [sell,setSell] = useState("anything");<br>
+                const handleChange = (e) => {<br>
+                    setSell(e.target.value)<br>
+                }<br>
+                return &lt;h1&gt; I'm selling {props.item} &lt;h1&gt;
+            }
+        </p>
+    </div>
 
 
-    <div class="chapter bubble">Chapter 4</div>
-    <div class="tiny red bubble"></div>
+    <div class="chapter bubble">CSS</div>
+    <div class="tiny red bubble">
+        <p>
+            const myStyle = {<br>
+                color: "white",<br>
+                backgroundColor: ("AppleRed"),<br>
+                fontFamily: "Arial"
+            }<br><br>
+            return (<br>
+            &lt;h1 style={myStyle}&gt;&lt;/h1&gt;
+            )
+        </p>
+    </div>
     
 </body>
 </html>
