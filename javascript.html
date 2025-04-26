@@ -19,7 +19,7 @@
     </div>
 
     <div class="chapter bubble">Arrays and Objects</div>
-    <div class="small blue bubble">
+    <div class="medium blue bubble">
         <p>
             <span class="title highlight-red">Arrays</span><br>
             var reducer = <span class="highlight-red">array_name</span><span class="highlight-boo"><span class="highlight-green">.reduce((acc,current) => acc + current, <span class="highlight-note">[initial]</span>)</span></span> Returns the sum of values in the array <span class="highlight-note">[+ optional initial value]</span><br>
@@ -28,7 +28,10 @@
             var a = <span class="highlight-red">array_name</span><span class="highlight-green">.flat(<span class="highlight-note">default=1</span>)</span> Spreads nested arrys to the factor specified<br>
             var spreader = <span class="highlight-yellow">new Set(<span class="highlight-red">[...spread,...arrays]</span>)</span> By spreading array contents into a set, duplicates are automatically rejected<br>
             <span class="title highlight-blue">Objects</span><br>
-            const obj = <span class="highlight-yellow">Object</span>.groupBy(<span class="highlight-blue">object_name</span>, <span class="highlight-green">item => { item.name }</span>)
+            const <span class="highlight-blue">obj</span> = <span class="highlight-yellow">Object</span>.groupBy(<span class="highlight-blue">object_name</span>, <span class="highlight-green">item => { item.name }</span>)<br>
+            <span class="highlight-yellow">Object</span>.keys(<span class="highlight-blue">obj</span>)<br>
+            <span class="highlight-yellow">Object</span>.entries(<span class="highlight-blue">obj</span>)<br>
+            <span class="highlight-yellow">Object</span>.assign(<span class="highlight-blue">target</span>,<span class="highlight-purple">source_1[,source_2, source_3...]</span>) Merge all keys and values from source(s) to target non-enumerable properties excluded<br>
         </p>
     </div>
 
